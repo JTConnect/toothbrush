@@ -1,0 +1,182 @@
+<div>
+    <div class="row">
+        <div class="col-sm-12"><h3 class="textColor">Your Job Posting!</h3></div>
+
+    </div>
+    <div class="row">
+        <div class="col-sm-12 visible-sm-block visible-md-block visible-lg-block">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th class="textColor">Name of Job</th>
+                    <th class="textColor">Company</th>
+                    <th class="textColor">Type</th>
+                    <th class="textColor">Email</th>
+                    <th class="textColor">Total</th>
+                    <th class="textColor"></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>{{vm.jobPost.JobTitle}}</td>
+                    <td>{{vm.jobPost.CompanyName}}}</td>
+                    <td>Employement</td>
+                    <td>{{vm.jobPost.CompanyEmail}}</td>
+                    <td><b>$150</b></td>
+                    <td>
+                        <button class="btn btn-info btn-lg" ui-sref="root.appLayout.createJob.postAJob">Edit?</button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="visible-xs-block">
+        <div class="row">
+            <div class="col-xs-12">
+                <table class="table table-striped">
+                    <tbody>
+                    <tr>
+                        <td class="textColor">Position:</td>
+                        <td>{{vm.jobPost.JobTitle}}</td>
+                    </tr>
+                    <tr>
+                        <td class="textColor">Company:</td>
+                        <td>{{vm.jobPost.CompanyName}}</td>
+                    </tr>
+                    <tr>
+                        <td class="textColor">Type:</td>
+                        <td>Employment</td>
+                    </tr>
+                    <tr>
+                        <td class="textColor">Email:</td>
+                        <td>{{vm.jobPost.CompanyEmail}}</td>
+                    </tr>
+                    <tr>
+                        <td class="textColor">Total:</td>
+                        <td>$150</td>
+                    </tr>
+                    <tr>
+                        <td class="textColor">Edit?</td>
+                        <td>
+                            <button class="btn btn-info btn-lg " ui-sref="root.appLayout.createJob.postAJob">EDIT
+                            </button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12"><h1>Enter Your Payment information - <i class="fa fa-lock"></i>Secure</h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <!-- You can make it whatever width you want. I'm making it full width
+        on <= small devices and 4/12 page width on >= medium devices -->
+
+        <div class="col-sm-12">
+            <!-- CREDIT CARD FORM STARTS HERE -->
+            <div class="panel panel-default credit-card-box">
+                <div class="panel-heading display-table">
+                    <div class="row display-tr">
+                        <h1 class="panel-title display-td">Payment Details</h1>
+
+                        <div class="display-td">
+                            <img class="img-responsive pull-right" src="http://i76.imgup.net/accepted_c22e0.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <form name="vm.paymentForm" id="payment-form" novalidate>
+
+                        <div ng-show="vm.paymentForm.$invalid && vm.submitted" class="row">
+                            <div class="col-sm-12">
+                                <div class="errorMessage"><i class="fa fa-exclamation-circle"></i> Some fields are
+                                    incorrect
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <label>CARD NUMBER</label>
+
+                                <div class="input-group">
+                                    <input type="number"
+                                           min="0"
+                                           class="form-control"
+                                           name="cardNumber"
+                                           placeholder="Valid Card Number"
+                                           required/>
+                                    <span class="input-group-addon"><i class="fa fa-credit-card"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h4 style="font-weight: bolder;">Expiration</h4>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <label><span>Month</span></label>
+                                    <input type="number" min="0" class="form-control" placeholder="01" required/>
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <label><span>Year</span></label>
+                                    <input
+                                            type="number"
+                                            min="0"
+                                            class="form-control"
+                                            name="cardExpiry"
+                                            placeholder="2016"
+                                            required/>
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <label>CV CODE</label>
+                                    <input type="number"
+                                           min="0"
+                                           class="form-control"
+                                           name="cardCVC"
+                                           placeholder="CVC"
+                                           required/>
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <label>ZipCode </label>
+                                <input type="number" min="0" class="form-control" name="zipcode" required/>
+                            </div>
+                            <div class="col-xs-12">
+                                <label></label>
+                                <button
+                                        class="btn btn-success btn-lg btn-block"
+                                        type="submit"
+                                        ng-click="vm.ProcessJobPayment()">Post Your Job!
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- CREDIT CARD FORM ENDS HERE -->
+        </div>
+    </div>
+</div>
+
+<!-- Stripe for payments
+<script type="text/javascript" src="https://js.stripe.com/v2/"></script> -->
+
+</div>
+
+</div>
