@@ -103,16 +103,24 @@
                             </div>
                         </div>
 
+                        <div ng-show="vm.paymentSubmitObject.showErrorMessage" class="row">
+                            <div class="col-sm-12">
+                                <div class="errorMessage"><i class="fa fa-exclamation-circle"></i>
+                                    {{vm.paymentSubmitObject.errorMessage}}
+                                </div>
+                            </div>
+                        </div>
+
                         <div class="row">
                             <div class="col-xs-12">
                                 <label>CARD NUMBER</label>
 
                                 <div class="input-group">
                                     <input type="number"
-                                           min="0"
                                            class="form-control"
                                            name="cardNumber"
                                            placeholder="Valid Card Number"
+                                           ng-model="vm.cardObject.number"
                                            required/>
                                     <span class="input-group-addon"><i class="fa fa-credit-card"></i></span>
                                 </div>
@@ -126,30 +134,32 @@
                         <div class="row">
                             <div class="col-sm-12">
                                 <div class="form-group">
-                                    <label><span>Month</span></label>
-                                    <input type="number" min="0" class="form-control" placeholder="01" required/>
+                                    <label><span>Month Ex. 01</span></label>
+                                    <input type="text" maxlength="2" class="form-control" placeholder="01" ng-model="vm.cardObject.exp_month" required/>
                                 </div>
                             </div>
                             <div class="col-sm-12">
                                 <div class="form-group">
                                     <label><span>Year</span></label>
                                     <input
-                                            type="number"
-                                            min="0"
+                                            type="text"
+                                            maxlength="4"
                                             class="form-control"
                                             name="cardExpiry"
                                             placeholder="2016"
+                                            ng-model="vm.cardObject.exp_year"
                                             required/>
                                 </div>
                             </div>
                             <div class="col-sm-12">
                                 <div class="form-group">
-                                    <label>CV CODE</label>
-                                    <input type="number"
-                                           min="0"
+                                    <label>CVC CODE</label>
+                                    <input type="text"
+                                           maxlength="3"
                                            class="form-control"
                                            name="cardCVC"
                                            placeholder="CVC"
+                                           ng-model="vm.cardObject.cvc"
                                            required/>
                                 </div>
                             </div>
@@ -159,10 +169,8 @@
                             </div>
                             <div class="col-xs-12">
                                 <label></label>
-                                <button
-                                        class="btn btn-success btn-lg btn-block"
-                                        type="submit"
-                                        ng-click="vm.ProcessJobPayment()">Post Your Job!
+                                <button class="btn btn-success btn-lg btn-block" type="submit" ng-click="vm.ProcessJobPayment()">
+                                    {{vm.submitButtonText}}
                                 </button>
                             </div>
                         </div>

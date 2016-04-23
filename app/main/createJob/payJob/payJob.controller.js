@@ -3,25 +3,79 @@
         .module('app')
         .controller('PayJobController', PayJobController);
 
-    PayJobController.$inject = ['CreateJobService', '$state'];
+    PayJobController.$inject = ['CreateJobService', 'PaymentService', '$state', '$scope'];
 
-    function PayJobController(CreateJobService,$state) {
+    function PayJobController(CreateJobService, PaymentService, $state, $scope) {
         var vm = this;
+
         vm.message = "Perfect! Last Step";
-        vm.jobPost = CreateJobService.GetJobPosting();
 
         vm.ProcessJobPayment = processJobPayment;
 
-        activate();
-        function activate() {
-            if(vm.jobPost == null || vm.jobPost == undefined) {$state.go('root.appLayout.createJob.postAJob'); }
-        }
-
         function processJobPayment() {
+            vm.paymentSubmitObject.showErrorMessage = false;
+            vm.submitButtonText = vm.paymentSubmitObject.loadingText;
+
             vm.submitted = true;
-            if(vm.paymentForm.$invalid) return;
+
+            if(vm.paymentForm.$invalid) {
+                vm.submitButtonText = "Post Your Job!";
+                return;
+            }
+
+            PaymentService.PostPayment(vm.cardObject, paymentCallback);
+
+            function paymentCallback(err, result) {
+                if(err) {
+                    ShowError(err.errorMessage);
+                }else {
+                    var jobObject = getJobPostingObject();
+                    jobObject.token = result.token;
+
+                    //placeholder need feature property set at create job job
+                    jobObject.Feature = false;
+
+                    var jobPromise = CreateJobService.PersistJobPost(jobObject);
+
+                    jobPromise.then(function(result) {
+                        vm.submitButtonText = "Success, Job has been Posted!";
+                    }).catch(function(err) {
+                        ShowError(err.errorMessage);
+                    });
+                }
+            }
         }
 
+        function ShowError(errMessage) {
+            if(['$digest', '$apply'].indexOf($scope.$root.$$phase) == -1) {
+                run();
+                $scope.$apply();
+            }else {
+                $scope.$eval(run());
+            }
+
+            function run() {
+                vm.paymentSubmitObject.errorMessage = errMessage;
+                vm.paymentSubmitObject.showErrorMessage = true;
+                vm.submitButtonText = "Post Your Job!";
+            }
+        }
+
+        function getJobPostingObject() {
+            if(!vm.jobPost) vm.jobPost = CreateJobService.GetJobPosting();
+            return vm.jobPost;
+        }
+
+        function activate() {
+            if(!getJobPostingObject()) $state.go('root.appLayout.createJob.postAJob');
+
+            vm.cardObject = {};
+
+            vm.submitButtonText = "Post Your Job!";
+            vm.paymentSubmitObject = {loading: false, loadingText: 'Posting Job...', showErrorMessage: false};
+        }
+
+        activate();
     }
 
 })();
