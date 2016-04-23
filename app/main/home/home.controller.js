@@ -12,11 +12,23 @@
 
         activate();
         function activate() {
-            //TODO: initalize code here
+           setUp();
         }
 
-        function navigateTo() {
+        function navigateTo(route) {
+            if(!route) return;
             $state.go('root.appLayout.createJob.postAJob');
+        }
+
+        function setUp() {
+            vm.programming = [{CompanyName: "Walmart", JobTitle: "Senior Executive", DatePosted: "Apr 23"},
+                {CompanyName: "Walmart", JobTitle: "Senior Executive", DatePosted: "Apr 23"},
+                {CompanyName: "Walmart", JobTitle: "Senior Executive", DatePosted: "Apr 23"},
+                {CompanyName: "Walmart", JobTitle: "Senior Executive", DatePosted: "Apr 23"},
+                {CompanyName: "Walmart", JobTitle: "Senior Executive", DatePosted: "Apr 23"},
+                {CompanyName: "Walmart", JobTitle: "Senior Executive", DatePosted: "01/22/2015"},
+                {CompanyName: "Walmart", JobTitle: "Senior Executive", DatePosted: "01/22/2015"},
+                {CompanyName: "Walmart", JobTitle: "Senior Executive", DatePosted: "01/22/2015"},];
         }
 
     }

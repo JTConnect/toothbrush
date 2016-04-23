@@ -11,8 +11,7 @@
         return {
             GetCategories: getCategories,
             SaveJobPosting: saveJobPostingInStorage,
-            GetJobPosting: getJobPostingFromStorage,
-            PersistJobPost : persistJobPost
+            GetJobPosting: getJobPostingFromStorage
         };
 
         /*API Services*/
@@ -52,4 +51,5 @@
             });
         }
     }
+
 })();
