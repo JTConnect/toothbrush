@@ -19,7 +19,7 @@
 
         function postPayment(paymentObject, callback) {
             if(paymentObject.exp_month && !isNaN(paymentObject.exp_month)) {
-                var firstDigit = +paymentObject.exp_month[0].trim();
+                var firstDigit = +paymentObject.exp_month[0];
                 var secondDigit = +paymentObject.exp_month[1];
                 var thirdDigit = +paymentObject.exp_month[2];
 
