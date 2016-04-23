@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b139dee7-33a9-41b8-be8d-91f4354948f2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/main/createJob/payJob/payment.service.js" afterPath="$PROJECT_DIR$/app/main/createJob/payJob/payment.service.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/main/createJob/createJob.service.js" afterPath="$PROJECT_DIR$/app/main/createJob/createJob.service.js" />
     </list>
     <ignored path="toothbrush.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,14 +26,44 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="payment.service.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="payment.service.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/main/createJob/payJob/payment.service.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33226836" vertical-offset="77" max-vertical-offset="1215">
-              <caret line="21" column="61" selection-start-line="21" selection-start-column="61" selection-end-line="21" selection-end-column="61" />
+            <state vertical-scroll-proportion="-3.8888888" vertical-offset="150" max-vertical-offset="1215">
+              <caret line="19" column="27" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
               <folding>
                 <element signature="e#0#46#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="createJob.service.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/main/createJob/createJob.service.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.40095848" vertical-offset="289" max-vertical-offset="915">
+              <caret line="36" column="44" selection-start-line="36" selection-start-column="44" selection-end-line="36" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="createJob.controller.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/main/createJob/createJob.controller.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="payJob.controller.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/main/createJob/payJob/payJob.controller.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1290">
+              <caret line="37" column="68" selection-start-line="37" selection-start-column="54" selection-end-line="37" selection-end-column="68" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -52,10 +81,10 @@
         <option value="$PROJECT_DIR$/app/main/createJob/postJob/postJob.controller.js" />
         <option value="$PROJECT_DIR$/app/main/createJob/payJob/PaymentService.js" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/app/main/createJob/createJob.service.js" />
         <option value="$PROJECT_DIR$/app/main/createJob/payJob/payJob.html" />
         <option value="$PROJECT_DIR$/app/main/createJob/payJob/payJob.controller.js" />
         <option value="$PROJECT_DIR$/app/main/createJob/payJob/payment.service.js" />
+        <option value="$PROJECT_DIR$/app/main/createJob/createJob.service.js" />
       </list>
     </option>
   </component>
@@ -427,22 +456,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/main/createJob/createJob.service.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="247" max-vertical-offset="900">
-          <caret line="34" column="9" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/main/createJob/payJob/payJob.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.0479233" vertical-offset="529" max-vertical-offset="1290">
-          <caret line="79" column="0" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/main/createJob/payJob/payJob.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6976744" vertical-offset="1155" max-vertical-offset="2925">
@@ -451,13 +464,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/main/createJob/createJob.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="653">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/main/createJob/payJob/payment.service.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33226836" vertical-offset="77" max-vertical-offset="1215">
-          <caret line="21" column="61" selection-start-line="21" selection-start-column="61" selection-end-line="21" selection-end-column="61" />
+        <state vertical-scroll-proportion="-3.8888888" vertical-offset="150" max-vertical-offset="1215">
+          <caret line="19" column="27" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
           <folding>
             <element signature="e#0#46#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/main/createJob/payJob/payJob.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="1290">
+          <caret line="37" column="68" selection-start-line="37" selection-start-column="54" selection-end-line="37" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/main/createJob/createJob.service.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.40095848" vertical-offset="289" max-vertical-offset="915">
+          <caret line="36" column="44" selection-start-line="36" selection-start-column="44" selection-end-line="36" selection-end-column="44" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -11,7 +11,8 @@
         return {
             GetCategories: getCategories,
             SaveJobPosting: saveJobPostingInStorage,
-            GetJobPosting: getJobPostingFromStorage
+            GetJobPosting: getJobPostingFromStorage,
+            PersistJobPost: persistJobPost
         };
 
         /*API Services*/
