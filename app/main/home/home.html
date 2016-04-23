@@ -1,56 +1,100 @@
-<div style="background:#00bfff !important; color:white;" class="jumbotron text-center">
+<div class="jumbotron homeContainer">
+    <h1><span class="text-bold">i<i style="color:white;" class="fa fa-heart"></i>RemoteWork</span></h1>
+
     <h1>Let us Find the Jobs</h1>
 
-    <p>& <b><i>You</i></b> the perfect match.</p>
+    <p>& <span class="text-bold">You</span> the perfect match.</p>
 </div>
 
-<div class="container"> <!-- Start of Container -->
-
-    <div style="margin-bottom:20px;; font-size:16pt; text-align:center">
-        <b>i<i style="color:#1aa3ff;" class="fa fa-heart"></i>RemoteWork</b> is the simpliest most efficient way of
-        finding remote Jobs. <br/>Find the most qualified professionals from around the world!
-        <br/><b>No</b> accounts. <b>No</b> hassle. <b>Just</b> Jobs.
-    </div>
-
-    <div style="border-radius:20px !important" class="jumbotron text-center">
-        Hey Employer,
-        Need Programmers?
-        <button type="button" class="btn btn-primary" ng-click="vm.NavigateTo()"  > Post a Job: $150 for 40 Days!
-        </button>
-    </div>
-
-    <div class="row"> <!--  Start of Row -->
-        <div class="col-md-4">
-            <h2>Getting started</h2>
-
-            <p>
-                ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-                enables a clean separation of concerns and gives you full control over markup
-                for enjoyable, agile development.
-            </p>
-
-            <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a>
-            </p>
-        </div>
-        <div class="col-md-4">
-            <h2>Get more libraries</h2>
-
-            <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools
-                in Visual Studio projects.</p>
-
-            <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a>
-            </p>
-        </div>
-        <div class="col-md-4">
-            <h2>Web Hosting</h2>
-
-            <p>You can easily find a web hosting company that offers the right mix of features and price for your
-                applications.</p>
-
-            <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a>
-            </p>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 text-center">
+            <div style="margin-bottom:20px; font-size:16pt;">
+                <b>i<i style="color:#1aa3ff;" class="fa fa-heart"></i>RemoteWork</b> is the simpliest most efficient way of
+                finding remote Jobs. <br/>Find the most qualified professionals from around the world!
+                <br/><span class="text-bold">No</span> accounts. <span class="text-bold">No</span> hassle. <span class="text-bold">Just</span> Jobs.
+            </div>
         </div>
     </div>
-    <!-- End of Row -->
+    <div class="row pTop-15">
+        <div class="col-sm-12">
+            <div class="jobLabel" ng-click="vm.NavigateTo('root.appLayout.createJob.postAJob')">POST A JOB: $100 for 35 days</div>
+        </div>
+    </div>
 
-</div> <!-- End of Container -->
+    <div class="row pTop-5">
+        <div class="col-sm-12">
+            <input ng-model="vm.searchText" type="text" class="form-control" placeholder="Search: ex. 'Node.js', 'javascript', Marketing ">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12 text-red">
+            <h2>PROGRAMMING JOBS </h2>
+
+        </div>
+        <div class="col-sm-12">
+            <table class="table jobTable">
+                <tbody>
+                <tr ng-repeat="obj in vm.programming | filter:vm.searchText">
+                    <td class="text-bold w20">{{obj.CompanyName}}</td>
+                    <td class="w20">{{obj.JobTitle}}</td>
+                    <td class="w20">{{obj.DatePosted}}</td>
+                    <td class="border-white w20">{{obj.NewPost}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 text-red">
+            <h2>Design</h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12 text-red">
+            <h2>DEVOPS & SYSADMIN JOBS</h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12 text-red">
+            <h2>CUSTOMER SUPPORT JOBS</h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12 text-red">
+            <h2>COPYWRITING JOBS</h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12 text-red">
+            <h2>MARKETING JOBS</h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12 text-red">
+            <h2>BUSINESS/EXEC & MANAGEMENT JOBS</h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12 text-red">
+            <h2>ALL OTHER JOBS</h2>
+        </div>
+    </div>
+
+
+
+
+
+
+</div>
+
+
+
+

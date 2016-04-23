@@ -32,8 +32,5 @@
         function getJobPostingFromStorage() {
             return localStorageService.get("GlichoJobPosting");
         }
-
-
     }
-
 })();
