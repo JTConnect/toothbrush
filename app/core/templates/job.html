@@ -1,0 +1,12 @@
+<div class="col-sm-12">
+    <table class="table jobTable">
+        <tbody>
+        <tr ng-repeat="obj in vm.jobs | filter:vm.searchText">
+            <td class="text-bold w20">{{obj.CompanyName}}</td>
+            <td class="w20">{{obj.JobTitle}}</td>
+            <td class="w20">{{obj.DatePosted}}</td>
+            <td class="border-white w20">{{obj.NewPost}}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
