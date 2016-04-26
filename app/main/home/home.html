@@ -33,59 +33,55 @@
             <h2>PROGRAMMING JOBS </h2>
 
         </div>
-        <div class="col-sm-12">
-            <table class="table jobTable">
-                <tbody>
-                <tr ng-repeat="obj in vm.programming | filter:vm.searchText">
-                    <td class="text-bold">{{obj.CompanyName}}</td>
-                    <td class="">{{obj.JobTitle}}</td>
-                    <td class="">{{obj.DatePosted}}</td>
-                    <td class="border-white">{{obj.NewPost}}</td>
-                </tr>
-                </tbody>
-            </table>
-        </div>
+        <job-grid jobs="vm.programming" text="vm.searchText" ></job-grid>
     </div>
     <div class="row">
         <div class="col-sm-12 text-red">
             <h2>Design</h2>
         </div>
+        <job-grid jobs="vm.design" text="vm.searchText" ></job-grid>
     </div>
 
     <div class="row">
         <div class="col-sm-12 text-red">
             <h2>DEVOPS & SYSADMIN JOBS</h2>
         </div>
+        <job-grid jobs="vm.sysAdmin" text="vm.searchText" ></job-grid>
     </div>
 
     <div class="row">
         <div class="col-sm-12 text-red">
             <h2>CUSTOMER SUPPORT JOBS</h2>
         </div>
+        <job-grid jobs="vm.customerSupport" text="vm.searchText" ></job-grid>
     </div>
 
     <div class="row">
         <div class="col-sm-12 text-red">
             <h2>COPYWRITING JOBS</h2>
         </div>
+        <job-grid jobs="vm.copyWriting" text="vm.searchText" ></job-grid>
     </div>
 
     <div class="row">
         <div class="col-sm-12 text-red">
             <h2>MARKETING JOBS</h2>
         </div>
+        <job-grid jobs="vm.marketing" text="vm.searchText" ></job-grid>
     </div>
 
     <div class="row">
         <div class="col-sm-12 text-red">
             <h2>BUSINESS/EXEC & MANAGEMENT JOBS</h2>
         </div>
+        <job-grid jobs="vm.management" text="vm.searchText" ></job-grid>
     </div>
 
     <div class="row">
         <div class="col-sm-12 text-red">
             <h2>ALL OTHER JOBS</h2>
         </div>
+        <job-grid jobs="vm.other" text="vm.searchText" ></job-grid>
     </div>
 </div>
 
