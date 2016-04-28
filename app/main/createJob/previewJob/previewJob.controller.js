@@ -14,6 +14,12 @@
         function activate() {
             //redirect user if job posting is null
             if(vm.previewJob == null || vm.previewJob == undefined) {$state.go('root.appLayout.createJob.postAJob'); }
+            iLink(vm.previewJob.CompanyUrl);
+        }
+        function iLink(url){ 
+            var createLink = 'http://' + url; 
+            document.getElementById('clickableUrl').innerHTML += '<a href="'+ createLink +'">' + url +'</a>'; 
+            vm.previewJob.CompanyUrl = createLink; 
         }
     }
 })();
