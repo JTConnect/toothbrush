@@ -5,6 +5,7 @@
             'ui.router',
             'ngAnimate',
             'ui.bootstrap',
+            'ngSanitize',
             'LocalStorageModule'
         ]);
 

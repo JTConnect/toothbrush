@@ -17,16 +17,17 @@
     <div class="col-sm-12"><h1>{{vm.previewJob.JobTitle}}</h1></div>
     <div class="col-sm-12">
         <h2>{{vm.previewJob.CompanyName}},
-            <small>{{vm.previewJob.CompanyUrl}}</small>
+            <!--<small>{{vm.previewJob.CompanyUrl}}</small>-->
+            <small id="clickableUrl"></small>
         </h2>
     </div>
     <div class="col-sm-12">
-        <h2><b>{{vm.previewJob.CompanyLocation}}</b><span class="glyphicon glyphicon-map-marker"></span></h2>
+        <h2><span class="glyphicon glyphicon-map-marker"></span><b> {{vm.previewJob.CompanyLocation}}</b></h2>
     </div>
 </div>
 
 <div class="row">
-    <div class="col-sm-12"><h4>{{vm.previewJob.JobDescription}}</h4></div>
+    <div class="col-sm-12"><h4 ng-bind-html="vm.previewJob.JobDescription"></h4></div>
 </div>
 
 <div class="row">
@@ -55,3 +56,4 @@
         </div>
     </div>
 </div>
+<div style="margin-bottom: 3em;"></div>
