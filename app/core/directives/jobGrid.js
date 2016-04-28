@@ -7,7 +7,7 @@
     function jobGrid() {
         return {
             restrict: "EA",
-            scope: {jobs: "=", text: "="},
+            scope: {jobs: "=", text: "=", title: "=" },
             bindToController: true,
             templateUrl: 'app/core/templates/job.html',
             controller: myController,

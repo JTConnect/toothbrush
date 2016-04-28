@@ -1,7 +1,14 @@
 <div class="col-sm-12">
+
     <table class="table jobTable">
+        <thead>
+            <th colspan="4">
+                <span class="tableText">{{vm.title}}</span>
+            </th>
+        </thead>
+
         <tbody>
-        <tr ng-repeat="obj in vm.jobs | filter:vm.text">
+        <tr ng-repeat="obj in vm.jobs | filter:vm.text" class="text">
             <td class="text-bold">{{obj.CompanyName}}</td>
             <td class="">{{obj.JobTitle}}</td>
             <td class="">{{obj.DatePosted}}</td>

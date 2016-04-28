@@ -11,7 +11,7 @@
                     <div class="errorMessage"><i class="fa fa-exclamation-circle"></i>  Some fields are incorrect</div>
                 </div>
             </div>
-            <div style="width: 100%; word-wrap: break-word"><h2>{{vm.newJobPosting.JobTitle}}</h2></div>
+            <div class="text" style="width: 100%; word-wrap: break-word"><h2>{{vm.newJobPosting.JobTitle}}</h2></div>
             <hr />
 
             <form name="vm.postForm" novalidate>
@@ -19,7 +19,7 @@
 
                     <div class="col-md-4">
                         <div class="form-group" ng-class="{ 'has-error' : vm.postForm.jobTitle.$invalid && !vm.postForm.jobTitle.$pristine || (vm.submitted && vm.postForm.jobTitle.$invalid) }">
-                            <label>Job Title:</label>
+                            <label class="text">Job Title:</label>
                             <input class="form-control" type="text" name="jobTitle" ng-model="vm.newJobPosting.JobTitle" required placeholder="Ex: Full Stack Developer" />
                             <!--<p ng-show="vm.postForm.jobTitle.$invalid && !vm.postForm.jobTitle.$pristine || (vm.submitted && vm.postForm.jobTitle.$invalid)" class="help-block">Job Title is required.</p> -->
                         </div>
@@ -27,7 +27,7 @@
 
                     <div class="col-md-4">
                         <div class="form-group" ng-class="{ 'has-error' : vm.postForm.cate.$invalid && !vm.postForm.cate.$pristine || (vm.submitted && vm.newJobPosting.CategoryID === undefined) }">
-                            <label>Category:</label><br />
+                            <label class="text" >Category:</label><br />
                             <select
                                     class="form-control"
                                     name="cate"
@@ -40,7 +40,7 @@
 
                     <div class="col-md-4">
                         <div class="form-group" ng-class="{ 'has-error' : vm.postForm.cName.$invalid && !vm.postForm.cName.$pristine || (vm.submitted && vm.postForm.cName.$invalid) }">
-                            <label>Company Name:</label>
+                            <label class="text">Company Name:</label>
                             <input class="form-control" type="text" name="cName" ng-model="vm.newJobPosting.CompanyName" required placeholder="Ex: ProGress, LLC" />
                             <!--  <p ng-show="vm.postForm.cName.$invalid && !vm.postForm.cName.$pristine || (vm.submitted && vm.postForm.cName.$invalid)" class="help-block">Company Name is required.</p> -->
                         </div>
@@ -49,8 +49,8 @@
 
                     <div class="col-md-12">
                         <div class="form-group" ng-class="{'has-error' : vm.postForm.jobDes.$invalid && !vm.postForm.jobDes.$pristine || (vm.submitted && vm.postForm.jobDes.$invalid) }">
-                            <label>Job Description:</label>
-                            <textarea type="text" name="jobDes" ng-model="vm.newJobPosting.JobDescription" placeholder="Ex: You can work Remotely!" class="form-control" rows="8" required></textarea>
+                            <label class="text">Job Description:</label>
+                            <textarea type="text" name="jobDes" ng-model="vm.newJobPosting.JobDescription" placeholder="Ex: You can work Remotely!" class="form-control" rows="3" required></textarea>
                             <!-- <p ng-show="vm.postForm.jobDes.$invalid && !vm.postForm.jobDes.$pristine || (vm.submitted && vm.postForm.jobDes.$invalid)" class="help-block">Job Description is required.</p> -->
                         </div>
                     </div>
@@ -64,14 +64,14 @@
 
                     <div class="col-md-4">
                         <div class="form-group" ng-class="{ 'has-error' : vm.postForm.CompanyLocation.$invalid && !vm.postForm.CompanyLocation.$pristine || (vm.submitted && vm.postForm.CompanyLocation.$invalid)}">
-                            <label>Where are you located:</label>
+                            <label class="text">Where are you located:</label>
                             <input class="form-control" type="text" name="CompanyLocation" ng-model="vm.newJobPosting.CompanyLocation" required placeholder="Ex: Orlando, FL" />
                             <!-- <p ng-show="vm.postForm.CompanyLocation.$invalid && !vm.postForm.CompanyLocation.$pristine || (vm.submitted && vm.postForm.CompanyLocation.$invalid)" class="help-block">Company Location is required.</p> -->
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group" ng-class="{ 'has-error' : vm.postForm.CompanyUrl.$invalid && !vm.postForm.CompanyUrl.$pristine || (vm.submitted && vm.postForm.CompanyUrl.$invalid) }">
-                            <label>{{vm.newJobPosting.CompanyName}} Url:</label>
+                            <label class="text">{{vm.newJobPosting.CompanyName}} Url:</label>
                             <input class="form-control" type="text" name="CompanyUrl" ng-model="vm.newJobPosting.CompanyUrl" required placeholder="Ex: www.yourBusiness.com" />
                             <!-- <p ng-show="vm.postForm.CompanyUrl.$invalid && !vm.postForm.CompanyUrl.$pristine || (vm.submitted && vm.postForm.CompanyUrl.$invalid)" class="help-block">Company Url is required.</p> -->
                         </div>
@@ -79,7 +79,7 @@
 
                     <div class="col-md-4">
                         <div class="form-group" ng-class="{ 'has-error' : vm.postForm.CompanyEmail.$invalid && !vm.postForm.CompanyEmail.$pristine || (vm.submitted && vm.postForm.CompanyEmail.$invalid) }">
-                            <label>{{vm.newJobPosting.CompanyName}} Email:</label>
+                            <label class="text">{{vm.newJobPosting.CompanyName}} Email:</label>
                             <input class="form-control" type="email" name="CompanyEmail" ng-model="vm.newJobPosting.CompanyEmail" required placeholder="Ex: your@CompanyEmail.com" />
                             <!-- <p ng-show="vm.postForm.CompanyEmail.$invalid && !vm.postForm.CompanyEmail.$pristine || (vm.submitted && vm.postForm.CompanyEmail.$invalid)" class="help-block">Company Email is required.</p> -->
                         </div>
@@ -87,7 +87,7 @@
 
                     <div class="col-sm-12">
                         <div class="form-group" ng-class="{'has-error' : vm.postForm.howApply.$invalid && !vm.postForm.howApply.$pristine || (vm.submitted && vm.postForm.howApply.$invalid) }">
-                            <label>How do job seekers apply to your {{vm.newJobPosting.JobTitle}} position.</label>
+                            <label class="text">How do job seekers apply to your {{vm.newJobPosting.JobTitle}} position.</label>
                             <textarea type="text" name="howApply" ng-model="vm.newJobPosting.Apply" placeholder="Ex: Send your resume to james@company.com or Visit www.company.com/careers/apply " class="form-control" rows="3" required></textarea>
                             <!--    <p ng-show="vm.postForm.howApply.$invalid && !vm.postForm.howApply.$pristine  || (vm.submitted && vm.postForm.howApply.$invalid)" class="help-block">Telling job seekers how to apply is required.</p> -->
                         </div>
