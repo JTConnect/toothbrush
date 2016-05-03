@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b139dee7-33a9-41b8-be8d-91f4354948f2" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/main/createJob/postJob/postJob.controller.js" afterPath="$PROJECT_DIR$/app/main/createJob/postJob/postJob.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/main/createJob/postJob/postJob.html" afterPath="$PROJECT_DIR$/app/main/createJob/postJob/postJob.html" />
     </list>
     <ignored path="toothbrush.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -58,8 +60,8 @@
       <file leaf-file-name="postJob.controller.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/main/createJob/postJob/postJob.controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="310">
-              <caret line="106" column="47" selection-start-line="106" selection-start-column="47" selection-end-line="106" selection-end-column="47" />
+            <state relative-caret-position="195">
+              <caret line="88" column="9" selection-start-line="88" selection-start-column="9" selection-end-line="88" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -68,8 +70,8 @@
       <file leaf-file-name="postJob.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/main/createJob/postJob/postJob.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="63" column="55" selection-start-line="63" selection-start-column="42" selection-end-line="63" selection-end-column="55" />
+            <state relative-caret-position="255">
+              <caret line="62" column="57" selection-start-line="62" selection-start-column="57" selection-end-line="62" selection-end-column="57" />
               <folding>
                 <element signature="n#style#0;n#textarea#0;n#div#0;n#div#3;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#iFrame#0;n#div#0;n#div#3;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -98,8 +100,8 @@
         <option value="$PROJECT_DIR$/app/main/createJob/previewJob/previewJob.controller.js" />
         <option value="$PROJECT_DIR$/app/main/createJob/previewJob/previewJob.html" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/app/main/createJob/postJob/postJob.html" />
         <option value="$PROJECT_DIR$/app/main/createJob/postJob/postJob.controller.js" />
+        <option value="$PROJECT_DIR$/app/main/createJob/postJob/postJob.html" />
       </list>
     </option>
   </component>
@@ -364,12 +366,12 @@
       <workItem from="1461813461965" duration="4270000" />
       <workItem from="1461847965120" duration="584000" />
       <workItem from="1461952020852" duration="171000" />
-      <workItem from="1462210255268" duration="9923000" />
+      <workItem from="1462210255268" duration="10457000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14952000" />
+    <option name="totallyTimeSpent" value="15486000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -765,8 +767,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/main/createJob/postJob/postJob.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="63" column="55" selection-start-line="63" selection-start-column="42" selection-end-line="63" selection-end-column="55" />
+        <state relative-caret-position="255">
+          <caret line="62" column="57" selection-start-line="62" selection-start-column="57" selection-end-line="62" selection-end-column="57" />
           <folding>
             <element signature="n#style#0;n#textarea#0;n#div#0;n#div#3;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#iFrame#0;n#div#0;n#div#3;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -776,8 +778,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/main/createJob/postJob/postJob.controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="106" column="47" selection-start-line="106" selection-start-column="47" selection-end-line="106" selection-end-column="47" />
+        <state relative-caret-position="195">
+          <caret line="88" column="9" selection-start-line="88" selection-start-column="9" selection-end-line="88" selection-end-column="9" />
           <folding />
         </state>
       </provider>

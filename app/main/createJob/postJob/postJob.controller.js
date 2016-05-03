@@ -85,7 +85,7 @@
             return window.frames.richTextField;
         }
         function textAreaNameStr(){
-            return "myTextArea";
+            return "plainTextArea";
         }
 
         function postJob() {
