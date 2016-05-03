@@ -15,23 +15,24 @@
         activate();
         function activate() {
             getCategories(); 
-            richTextField.document.designMode = 'On';       //The code below gets the value of vm.newJobPosting.JobDescription and enters it into the iFrame 
-            if(vm.newJobPosting.JobDescription != null || vm.newJobPosting.JobDescription != undefined){
+
+            richTextField.document.designMode = 'On'; 
+
+            if(vm.newJobPosting.JobDescription != null || vm.newJobPosting.JobDescription != undefined)
                 window.frames["richTextField"].document.body.innerHTML = vm.newJobPosting.JobDescription;
-            }
-            else{
+            else
                 vm.newJobPosting.JobDescription = "";
-            }
 
         }
+
         //Rich Text Editor Components here
         vm.Italic = italic; 
-        vm.IBold = iBold; 
-        vm.IUnderLine = iUnderline; 
-        vm.IUnOrderedList = iUnOrderedList; 
-        vm.IOrderedList = iOrderedList; 
-        vm.ILink = iLink; 
-        vm.IFontSize = iFontSize;
+        vm.Bold = bold; 
+        vm.UnderLine = underline; 
+        vm.UnOrderedList = unOrderedList; 
+        vm.OrderedList = orderedList; 
+        vm.Link = link; 
+        vm.FontSize = fontSize;
 
         vm.fontSize = [{ 
             id:12, 
@@ -56,26 +57,26 @@
             value: "7" 
         }];
 
-        function iFontSize(){ 
+        function fontSize(){ 
             var size = vm.selectedSize; 
             richTextField.document.execCommand('FontSize', false,size); 
         } 
         function italic(){ 
             richTextField.document.execCommand('italic',false,null); 
         } 
-        function iBold(){ 
+        function bold(){ 
             richTextField.document.execCommand('bold',false,null); 
         } 
-        function iUnderline(){ 
+        function underline(){ 
             richTextField.document.execCommand('underline',false,null); 
         } 
-        function iUnOrderedList(){ 
+        function unOrderedList(){ 
             richTextField.document.execCommand('InsertUnOrderedList',false,"newUL"); 
         } 
-        function iOrderedList(){ 
+        function orderedList(){ 
             richTextField.document.execCommand('InsertOrderedList',false,"newOL"); 
         } 
-        function iLink(){ 
+        function link(){ 
             var url = prompt("Enter the url you would like to add: ", "http://"); 
             richTextField.document.execCommand('CreateLink', false,url); 
         }
