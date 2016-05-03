@@ -17,7 +17,7 @@
             getCategories(); 
 
             editorName().document.designMode = 'On'; 
-
+            console.log(window.frames);
             if(vm.newJobPosting.JobDescription != null || vm.newJobPosting.JobDescription != undefined)
                 window.frames[editorNameString()].document.body.innerHTML = vm.newJobPosting.JobDescription;
             else
@@ -87,15 +87,18 @@
         function editorNameString (){
             return "richTextField";
         }
+        function textAreaNameStr(){
+            return "myTextArea";
+        }
 
         function postJob() {
             vm.submitted = true;
             if(vm.postForm.$invalid || vm.newJobPosting.CategoryID === undefined) return;
 
             var contents = document.getElementById("postForm"); 
-            contents.elements["myTextArea"].value = window.frames[editorNameString()].document.body.innerHTML;
+            contents.elements[textAreaNameStr()].value = window.frames[editorNameString()].document.body.innerHTML;
 
-            vm.newJobPosting.JobDescription = contents.elements["myTextArea"].value;
+            vm.newJobPosting.JobDescription = contents.elements[textAreaNameStr()].value;
 
             CreateJobService.SaveJobPosting(vm.newJobPosting);
             $state.go('root.appLayout.createJob.previewJob');
