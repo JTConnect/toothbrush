@@ -16,10 +16,10 @@
         function activate() {
             getCategories(); 
 
-            richTextField.document.designMode = 'On'; 
+            editorName().document.designMode = 'On'; 
 
             if(vm.newJobPosting.JobDescription != null || vm.newJobPosting.JobDescription != undefined)
-                window.frames["richTextField"].document.body.innerHTML = vm.newJobPosting.JobDescription;
+                window.frames[editorNameString()].document.body.innerHTML = vm.newJobPosting.JobDescription;
             else
                 vm.newJobPosting.JobDescription = "";
 
@@ -58,27 +58,34 @@
         }];
 
         function fontSize(){ 
-            var size = vm.selectedSize; 
-            richTextField.document.execCommand('FontSize', false,size); 
+            var size = vm.selectedSize;
+            editorName().document.execCommand('FontSize', false,size); 
         } 
         function italic(){ 
-            richTextField.document.execCommand('italic',false,null); 
+            editorName().document.execCommand('italic',false,null); 
         } 
-        function bold(){ 
-            richTextField.document.execCommand('bold',false,null); 
+        function bold(){
+            editorName().document.execCommand('bold',false,null); 
         } 
-        function underline(){ 
-            richTextField.document.execCommand('underline',false,null); 
+        function underline(){
+            editorName().document.execCommand('underline',false,null); 
         } 
-        function unOrderedList(){ 
-            richTextField.document.execCommand('InsertUnOrderedList',false,"newUL"); 
+        function unOrderedList(){
+            editorName().document.execCommand('InsertUnOrderedList',false,"newUL"); 
         } 
-        function orderedList(){ 
-            richTextField.document.execCommand('InsertOrderedList',false,"newOL"); 
+        function orderedList(){
+            editorName().document.execCommand('InsertOrderedList',false,"newOL"); 
         } 
         function link(){ 
-            var url = prompt("Enter the url you would like to add: ", "http://"); 
-            richTextField.document.execCommand('CreateLink', false,url); 
+            var url = prompt("Enter the url you would like to add: ", "http://");
+            editorName().document.execCommand('CreateLink', false,url); 
+        }
+
+        function editorName (){
+            return richTextField;
+        }
+        function editorNameString (){
+            return "richTextField";
         }
 
         function postJob() {
@@ -86,7 +93,7 @@
             if(vm.postForm.$invalid || vm.newJobPosting.CategoryID === undefined) return;
 
             var contents = document.getElementById("postForm"); 
-            contents.elements["myTextArea"].value = window.frames["richTextField"].document.body.innerHTML;
+            contents.elements["myTextArea"].value = window.frames[editorNameString()].document.body.innerHTML;
 
             vm.newJobPosting.JobDescription = contents.elements["myTextArea"].value;
 
