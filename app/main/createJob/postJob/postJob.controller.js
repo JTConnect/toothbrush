@@ -17,9 +17,9 @@
             getCategories(); 
 
             editorName().document.designMode = 'On'; 
-            console.log(window.frames);
+
             if(vm.newJobPosting.JobDescription != null || vm.newJobPosting.JobDescription != undefined)
-                window.frames[editorNameString()].document.body.innerHTML = vm.newJobPosting.JobDescription;
+               editorName().document.body.innerHTML =  vm.newJobPosting.JobDescription;
             else
                 vm.newJobPosting.JobDescription = "";
 
@@ -82,10 +82,7 @@
         }
 
         function editorName (){
-            return richTextField;
-        }
-        function editorNameString (){
-            return "richTextField";
+            return window.frames.richTextField;
         }
         function textAreaNameStr(){
             return "myTextArea";
@@ -96,7 +93,7 @@
             if(vm.postForm.$invalid || vm.newJobPosting.CategoryID === undefined) return;
 
             var contents = document.getElementById("postForm"); 
-            contents.elements[textAreaNameStr()].value = window.frames[editorNameString()].document.body.innerHTML;
+            contents.elements[textAreaNameStr()].value = editorName().document.body.innerHTML;
 
             vm.newJobPosting.JobDescription = contents.elements[textAreaNameStr()].value;
 
