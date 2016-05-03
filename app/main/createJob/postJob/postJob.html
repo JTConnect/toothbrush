@@ -14,7 +14,7 @@
             <div class="text" style="width: 100%; word-wrap: break-word"><h2>{{vm.newJobPosting.JobTitle}}</h2></div>
             <hr />
 
-            <form name="vm.postForm" novalidate>
+            <form name="vm.postForm" id="postForm" novalidate>
                 <div class="row"> <!--Start of Row-->
 
                     <div class="col-md-4">
@@ -47,14 +47,24 @@
                     </div>
                     <br />
 
-                    <div class="col-md-12">
-                        <div class="form-group" ng-class="{'has-error' : vm.postForm.jobDes.$invalid && !vm.postForm.jobDes.$pristine || (vm.submitted && vm.postForm.jobDes.$invalid) }">
-                            <label class="text">Job Description:</label>
-                            <textarea type="text" name="jobDes" ng-model="vm.newJobPosting.JobDescription" placeholder="Ex: You can work Remotely!" class="form-control" rows="3" required></textarea>
-                            <!-- <p ng-show="vm.postForm.jobDes.$invalid && !vm.postForm.jobDes.$pristine || (vm.submitted && vm.postForm.jobDes.$invalid)" class="help-block">Job Description is required.</p> -->
-                        </div>
-                    </div>
+                    <div class="col-md-12"> 
+                        <!-- Rich Text Editor Begins Here --> 
+                        <div class="form-group"> 
+                            <div>
+                                <label>Job Description:</label> <br/>
+                                <button type="button" ng-click="vm.Bold()" class="btn btn-default"><i class="fa fa-bold"></i></button> 
+                                <button type="button" ng-click="vm.Italic()" class="btn btn-default"><i class="fa fa-italic"></i></button> 
+                                <button type="button" ng-click="vm.UnderLine()" class="btn btn-default"><i class="fa fa-underline"></i></button> 
+                                <select ng-change="vm.FontSize()" ng-options="size.value as size.id for size in vm.fontSize" ng-model="vm.selectedSize"></select> 
+                                <button type="button" ng-click="vm.Link()" class="btn btn-default"><i class="fa fa-link"></i></button> 
+                                <button type="button" ng-click="vm.OrderedList()" class="btn btn-default"><i class="fa fa-list-ol"></i></button> 
+                                <button type="button" ng-click="vm.UnOrderedList()" class="btn btn-default"><i class="fa fa-list-ul"></i></button> 
+                            </div>
+                            <textarea name="plainTextArea" style="display: none;" required></textarea> 
+                            <iFrame name="richTextField" style="border:#d9d9d9 1px solid; height: 500px !important; background-color:white;" class="form-control"></iFrame> 
 
+                        </div> 
+                    </div> 
                 </div> <!-- End of Row -->
 
                 <h2><small>Tell us more about:</small> {{vm.newJobPosting.CompanyName}}</h2>

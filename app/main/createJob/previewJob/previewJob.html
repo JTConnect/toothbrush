@@ -17,7 +17,7 @@
     <div class="col-sm-12"><h1>{{vm.previewJob.JobTitle}}</h1></div>
     <div class="col-sm-12">
         <h2>{{vm.previewJob.CompanyName}},
-            <small>{{vm.previewJob.CompanyUrl}}</small>
+           <small><a ng-href="{{vm.previewJob.CompanyUrl}}">{{vm.previewJob.CompanyUrl}}</a></small>
         </h2>
     </div>
     <div class="col-sm-12">
@@ -26,7 +26,7 @@
 </div>
 
 <div class="row">
-    <div class="col-sm-12"><h4>{{vm.previewJob.JobDescription}}</h4></div>
+    <div class="col-sm-12"><h4 ng-bind-html="vm.previewJob.JobDescription"></h4></div>
 </div>
 
 <div class="row">
@@ -55,3 +55,4 @@
         </div>
     </div>
 </div>
+<div style="margin-bottom: 3em;"></div>
