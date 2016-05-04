@@ -9,10 +9,10 @@
 
         <tbody>
         <tr ng-repeat="obj in vm.jobs | filter:vm.text" class="text">
-            <td class="text-bold">{{obj.CompanyName}}</td>
-            <td class="">{{obj.JobTitle}}</td>
-            <td class="">{{obj.DatePosted}}</td>
-            <td class="border-white">{{obj.NewPost}}</td>
+            <td class="text-bold">{{obj.companyName}}</td>
+            <td class="">{{obj.jobTitle}}</td>
+            <td class="">{{obj.jobCreatedOn}}</td>
+            <!--<td class="border-white">{{obj.isJobPostNew}}</td>-->
         </tr>
         </tbody>
     </table>
