@@ -45,7 +45,7 @@
             return vm.jobId;
         }
 
-        function getEncodedPageUrl() {
+        function getPageUrl() {
             return encodeURIComponent($window.location.href);
         }
 
@@ -54,18 +54,18 @@
         }
 
         function getTwitterTweetRelated() {
-            return "?related=iheartremotework,glicho_";
+            return "?related=" + encodeURIComponent("iheartremotework,glicho_");
         }
 
         function getTwitterTweetText(value) {
-            return "&text=" + value.companyname + " is now hiring a " + value.jobtitle + "!";
+            return "&text=" + encodeURIComponent(value.companyname + " is now hiring a " + value.jobtitle + "!");
         }
 
         function setTweetThisJobUrl(job) {
             var twitterTweetDomain = getTwitterTweetUrl();
             var related = getTwitterTweetRelated();
             var text = getTwitterTweetText(job);
-            var url = "&url=" + getEncodedPageUrl();
+            var url = "&url=" + getPageUrl();
 
             vm.twitterTweetUrl = twitterTweetDomain + related + text + url;
         }
