@@ -2,7 +2,7 @@
     angular.module('app')
         .directive("jobGrid", jobGrid);
 
-    jobGrid.$inject = [];
+    jobGrid.$inject = ['$timeout','$state'];
 
     function jobGrid() {
         return {
@@ -14,7 +14,14 @@
             controllerAs: "vm"
         };
 
-        function myController() {}
+        function myController($state) {
+            var vm = this;
+
+            vm.navigate = function (obj) {
+                if(!obj || !obj.jobpostingid) return;
+                $state.go('root.appLayout.view', {id: obj.jobpostingid});
+            }
+        }
     }
 
 })();

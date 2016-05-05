@@ -11,7 +11,7 @@
         activate();
 
         function activate() {
-            vm.message = "Perfect! Last Step";
+            vm.message = "Perfect! Next";
             vm.previewJob = CreateJobService.GetJobPosting();
 
             if(!vm.previewJob) {$state.go('root.appLayout.createJob.postAJob'); }

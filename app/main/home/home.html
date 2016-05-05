@@ -1,9 +1,9 @@
 <div class="jumbotron homeContainer">
-    <h1><span class="text-bold">i<i style="color:white;" class="fa fa-heart"></i>RemoteWork</span></h1>
+    <h1><span>i<i class="fa fa-heart text-white"></i>RemoteWork</span></h1>
 
     <h1>Let us Find the Jobs</h1>
 
-    <p>& <span class="text-bold">You</span> the perfect match.</p>
+    <p>& <span class="">You</span> the perfect match.</p>
 </div>
 
 <div class="container">
@@ -22,18 +22,44 @@
         </div>
     </div>
 
-    <div class="row pTop-5">
+    <div class="row pTop-5 mBottom10">
         <div class="col-sm-12">
-            <input ng-model="vm.searchText" type="text" class="form-control" placeholder="Search: ex. 'Node.js', 'javascript', Marketing ">
+            <input ng-model="vm.searchText" type="text" class="form-control" placeholder="Search: ex. 'Node.js', 'javascript', 'Marketing' ">
         </div>
     </div>
 
-    <div class="row" style="margin-top: 20px">
+    <div class="apply mBottom10">
+        <job-grid jobs="vm.programming" text="vm.searchText" title="'PROGRAMMING JOBS'"></job-grid>
+    </div>
+    <div class="apply mBottom10">
+        <job-grid jobs="vm.design" text="vm.searchText" title="'DESIGN JOBS'" ></job-grid>
+    </div>
+    <div class="apply mBottom10">
+        <job-grid jobs="vm.devOpsSysadmin" text="vm.searchText" title="'DEVOPS & SYSADMIN JOBS'"></job-grid>
+    </div>
+    <div class="apply mBottom10">
+        <job-grid jobs="vm.customerSupport" text="vm.searchText" title="'CUSTOMER SUPPORT JOBS'"></job-grid>
+    </div>
+    <div class="apply mBottom10">
+        <job-grid jobs="vm.copyWriting" text="vm.searchText" title="'COPY WRITING JOBS'"></job-grid>
+    </div>
+ <!--   <div class="apply mBottom10">
+        <job-grid jobs="vm.design" text="vm.searchText" title="'MARKETING JOBS'"></job-grid>
+    </div>
+    <div class="apply mBottom10">
+        <job-grid jobs="vm.design" text="vm.searchText" title="'BUSINESS/EXEC & MANAGEMENT JOBS'"></job-grid>
+    </div>
+    <div class="apply mBottom10">
+        <job-grid jobs="vm.design" text="vm.searchText" title="'ALL OTHER JOBS'"></job-grid>
+    </div> -->
+
+
+    <!--<div class="row" style="margin-top: 20px">
         <div class="col-sm-12">
             <div class="panel panel-default">
                 <div class="panel-heading"></div>
                 <div class="panel-body">
-                    <job-grid jobs="vm.programming" text="vm.searchText" title="'PROGRAMMING JOBS'" ></job-grid>
+                    <job-grid jobs="vm.programming" text="vm.searchText" title="'PROGRAMMING JOBS'"></job-grid>
                 </div>
             </div>
         </div>

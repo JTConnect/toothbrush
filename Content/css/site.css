@@ -75,6 +75,7 @@ body {
 
 .text-bold {
     font-weight: 900;
+    color: black !important;
 }
 
 .homeContainer {
@@ -101,13 +102,61 @@ body {
     color: #990000;
 }
 
+.text-white {
+    color: white;
+}
+
+.text-blue {
+    color: #00bfff;
+}
+
 .text-center {
     text-align: center;
+}
+
+.jobTable {
+    cursor: pointer
 }
 
 
 .jobTable td.border-white {
     border: white;
+}
+
+.jobTable td.link {
+    text-decoration: underline;
+    color: #1aa3ff;
+}
+
+.link {
+    text-decoration: underline;
+    color: #1aa3ff;
+    font-size: 20px;
+   /* -webkit-tap-highlight-color: #a3daff; */
+}
+
+.link.textSmaller {
+    font-size: 17px;
+}
+
+.link:active {
+    background-color: #a3daff;
+}
+
+.smallLink{
+    text-decoration: underline;
+    color: #1aa3ff;
+    font-size: 16px;
+    -webkit-tap-highlight-color: #a3daff;
+}
+
+.smallLink:active {
+    background-color:#a3daff;
+}
+
+
+.cursor-pointer {
+    cursor: pointer;
 }
 
 
@@ -122,8 +171,8 @@ body {
 .jobContainer {
     background-color: white !important;
     width: 100%;
-    padding: 30px;
-    margin-bottom: 20px;
+    padding: 15%;
+    margin-bottom: 10%;
     -moz-border-radius: 2px;
     -webkit-border-radius: 2px;
     border-radius: 2px;
@@ -153,11 +202,16 @@ body {
     font-size: 13px;
     overflow: hidden;
     width: 90%;
+    -webkit-tap-highlight-color: #a3daff;
+}
+
+.text:active {
+    background-color:#a3daff;
 }
 
 .tableText {
     color: #990000;
-    font-size: 20px;
+    font-size: 25px;
     overflow: hidden;
     width: 90%;
 }
@@ -180,3 +234,46 @@ body {
     box-shadow: .5px 2px 3px 2px rgba(0, 0, 0, 0.3);
 }
 
+
+.apply {
+    background-color: white !important;
+    width: 100%;
+    padding: 10px;
+    -moz-box-shadow: .5px 2px 3px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: .5px 2px 3px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: .5px 2px 3px 2px rgba(0, 0, 0, 0.3);
+
+}
+
+.bottomSpace {
+    margin-bottom: 50px;
+}
+
+.mBottom10 {
+    margin-bottom: 20px;
+}
+.mBottom20 {
+    margin-bottom: 20px;
+}
+
+.mBottom40 {
+    margin-bottom: 40px;
+}
+
+.mLeft10 {
+    margin-left: 10px;
+}
+
+.horizontalRule {
+    border-style: solid;
+    border-top-color: white;
+    border-right-color: white;
+    border-left-color: white;
+    border-bottom-color: #f2f2f2;
+    border-width: 1px;
+    padding: 5px;
+}
+
+.bColor-yellow {
+    background-color: yellow;
+}

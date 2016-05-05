@@ -55,6 +55,16 @@
                     templateUrl: 'app/main/createJob/payJob/payJob.html',
                     controller: 'PayJobController',
                     controllerAs: 'vm'
+                })
+
+                .state('root.appLayout.view', {
+                    url: '/view/:id',
+                    templateUrl: 'app/main/viewJob/view.html',
+                    controller: 'ViewController',
+                    controllerAs: 'vm'
                 });
+
+
+
         }
 })();

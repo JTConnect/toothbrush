@@ -20,6 +20,7 @@
             $state.go('root.appLayout.createJob.postAJob');
         }
 
+
         function setUp() {
             HomeFactory.GetJobPostings().then(function(data) {
                 var jobObject = data.data.rows;
