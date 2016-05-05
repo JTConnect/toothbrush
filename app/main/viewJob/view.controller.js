@@ -4,9 +4,9 @@
         .module('app')
         .controller('ViewController', ViewController);
 
-    ViewController.$inject = ['$state','ViewService'];
+    ViewController.$inject = ['$state', '$window', 'ViewService'];
 
-    function ViewController($state, ViewService) {
+    function ViewController($state, $window, ViewService) {
         var vm = this;
         vm.jobId = undefined;
         vm.jobView = undefined;
@@ -32,11 +32,10 @@
 
         function getJob() {
             ViewService.GetJob(getJobId()).then(function(data) {
-                console.log(data);
                 vm.jobView = data;
+                setTweetThisJobUrl(vm.jobView);
             });
         }
-
 
         function setJobId(id) {
             vm.jobId = id;
@@ -46,9 +45,29 @@
             return vm.jobId;
         }
 
+        function getEncodedPageUrl() {
+            return encodeURIComponent($window.location.href);
+        }
 
+        function getTwitterTweetUrl() {
+            return "https://twitter.com/intent/tweet";
+        }
 
+        function getTwitterTweetRelated() {
+            return "?related=iheartremotework,glicho_";
+        }
+
+        function getTwitterTweetText(value) {
+            return "&text=" + value.companyname + " is now hiring a " + value.jobtitle + "!";
+        }
+
+        function setTweetThisJobUrl(job) {
+            var twitterTweetDomain = getTwitterTweetUrl();
+            var related = getTwitterTweetRelated();
+            var text = getTwitterTweetText(job);
+            var url = "&url=" + getEncodedPageUrl();
+
+            vm.twitterTweetUrl = twitterTweetDomain + related + text + url;
+        }
     }
-
-
 })();
