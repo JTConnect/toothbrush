@@ -12,9 +12,9 @@
     <div class="row">
         <div class="col-sm-6">
             <h2>
-                Full Stack Developer <br/>
+                {{vm.jobView.jobtitle}} <br/>
             </h2>
-            POSTED APR 28
+            POSTED {{vm.jobView.jobcreatedon}}
         </div>
         <div class="col-sm-6">
 
@@ -24,9 +24,9 @@
     <div class="row">
         <div class="col-sm-6">
             <h3>
-                Omnivore <br/>
-                Headquaters: San Franciso Bay Area <br/>
-                http://omnivore.io
+                {{vm.jobView.companyname}} <br/>
+                {{vm.jobView.location}} <br/>
+                <a ng-href="{{vm.viewJob.CompanyUrl}}" target="_blank">{{vm.viewJob.companyUrl}}</a>
             </h3>
         </div>
         <div class="col-sm-6">
@@ -38,38 +38,7 @@
     <div class="row">
         <div class="col-sm-8 col-xs-12">
             <div class="apply mBottom20">
-                Lorem ipsum dolor sit amet, in cum odio wisi, sit ut facer mazim. Eu vel vidit rebum torquatos, eum alia solum debitis ea. Usu assum omnesque no, ex per veniam vivendum reprimique. Te mei soluta aliquid epicurei, ei quo malorum corpora persequeris. Nobis putent nusquam est no. Ea veniam partem intellegebat mei.
-
-                Ea sonet ubique eum. Ea probo tibique intellegebat vis, sit meis gubergren maiestatis an. Nec legere splendide cu, at iudicabit cotidieque qui. Essent delectus usu eu, quo dicant adolescens temporibus ea.
-
-                Sonet aperiri feugait quo ea. Id ius elitr tamquam. Mei ne possim qualisque disputationi, verear epicurei id eum, sale minimum imperdiet an has. Odio error salutandi ex cum, ne veri admodum eum. Putent prodesset eum ne, ad pri illum semper putant.
-
-                Perpetua consetetur ei mei. Ius ocurreret intellegebat te. No est facer feugait, aliquid nominati mnesarchum an his. Ei ullum vivendum iracundia eos, no qui sumo movet noster. Moderatius mediocritatem sit et, aliquip posidonium scriptorem usu ad, pri mazim voluptua ex. Nam possim insolens ut, scripta tacimates pri eu, blandit sadipscing ad usu.
-
-                Quot justo an has, eam velit dignissim te. Ius ei habeo decore impedit, vim dico novum mandamus eu. Ne pri illud invenire, has te prima populo. Ne facete torquatos eum, pro in everti aliquam labores, pro agam signiferumque at. Erant electram elaboraret mea ea.
-
-                Lorem ipsum dolor sit amet, in cum odio wisi, sit ut facer mazim. Eu vel vidit rebum torquatos, eum alia solum debitis ea. Usu assum omnesque no, ex per veniam vivendum reprimique. Te mei soluta aliquid epicurei, ei quo malorum corpora persequeris. Nobis putent nusquam est no. Ea veniam partem intellegebat mei.
-
-                Ea sonet ubique eum. Ea probo tibique intellegebat vis, sit meis gubergren maiestatis an. Nec legere splendide cu, at iudicabit cotidieque qui. Essent delectus usu eu, quo dicant adolescens temporibus ea.
-
-
-
-                Sonet aperiri feugait quo ea. Id ius elitr tamquam. Mei ne possim qualisque disputationi, verear epicurei id eum, sale minimum imperdiet an has. Odio error salutandi ex cum, ne veri admodum eum. Putent prodesset eum ne, ad pri illum semper putant.
-
-                Perpetua consetetur ei mei. Ius ocurreret intellegebat te. No est facer feugait, aliquid nominati mnesarchum an his. Ei ullum vivendum iracundia eos, no qui sumo movet noster. Moderatius mediocritatem sit et, aliquip posidonium scriptorem usu ad, pri mazim voluptua ex. Nam possim insolens ut, scripta tacimates pri eu, blandit sadipscing ad usu.
-
-                Quot justo an has, eam velit dignissim te. Ius ei habeo decore impedit, vim dico novum mandamus eu. Ne pri illud invenire, has te prima populo. Ne facete torquatos eum, pro in everti aliquam labores, pro agam signiferumque at. Erant electram elaboraret mea ea.
-
-                Lorem ipsum dolor sit amet, in cum odio wisi, sit ut facer mazim. Eu vel vidit rebum torquatos, eum alia solum debitis ea. Usu assum omnesque no, ex per veniam vivendum reprimique. Te mei soluta aliquid epicurei, ei quo malorum corpora persequeris. Nobis putent nusquam est no. Ea veniam partem intellegebat mei.
-
-                Ea sonet ubique eum. Ea probo tibique intellegebat vis, sit meis gubergren maiestatis an. Nec legere splendide cu, at iudicabit cotidieque qui. Essent delectus usu eu, quo dicant adolescens temporibus ea.
-
-                Sonet aperiri feugait quo ea. Id ius elitr tamquam. Mei ne possim qualisque disputationi, verear epicurei id eum, sale minimum imperdiet an has. Odio error salutandi ex cum, ne veri admodum eum. Putent prodesset eum ne, ad pri illum semper putant.
-
-                Perpetua consetetur ei mei. Ius ocurreret intellegebat te. No est facer feugait, aliquid nominati mnesarchum an his. Ei ullum vivendum iracundia eos, no qui sumo movet noster. Moderatius mediocritatem sit et, aliquip posidonium scriptorem usu ad, pri mazim voluptua ex. Nam possim insolens ut, scripta tacimates pri eu, blandit sadipscing ad usu.
-
-                Quot justo an has, eam velit dignissim te. Ius ei habeo decore impedit, vim dico novum mandamus eu. Ne pri illud invenire, has te prima populo. Ne facete torquatos eum, pro in everti aliquam labores, pro agam signiferumque at. Erant electram elaboraret mea ea.
-
+                <div ng-bind-html="vm.jobView.jobdescription"></div>
             </div>
         </div>
         <div class="col-sm-4 col-xs-12">
@@ -91,7 +60,7 @@
             <div class="apply">
                 <span class="text-bold">APPLY FOR THIS POSITION</span>
                 <br/>
-                <a href="">https://google.com</a>
+                <div ng-bind-html="vm.jobView.howtoapply"></div>
             </div>
         </div>
     </div>

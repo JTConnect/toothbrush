@@ -2,19 +2,18 @@
 
     <div ng-repeat="obj in vm.jobs | filter:vm.text" class="text" ng-click="vm.navigate(obj)">
         <div class="row horizontalRule visible-sm-block visible-md-block visible-lg-block">
-            <div class="col-sm-3 text-bold">{{obj.companyName}} Corporation</div>
-            <div class="col-sm-4 link textSmaller">{{obj.jobTitle}} Premier Director</div>
+            <div class="col-sm-3 text-bold">{{obj.companyName}}</div>
+            <div class="col-sm-4 link textSmaller">{{obj.jobTitle}}</div>
             <div class="col-sm-3">{{obj.jobCreatedOn}}</div>
             <div ng-if="obj.isJobPostNew === true" class="col-sm-2"><span class="label label-success">New</span></div>
         </div>
         <div class="row horizontalRule visible-xs-block">
-            <div class="col-xs-12 text-bold">{{obj.companyName}} Corporation</div>
-            <div class="col-xs-12 link">{{obj.jobTitle}} Premier Director</div>
+            <div class="col-xs-12 text-bold">{{obj.companyName}}</div>
+            <div class="col-xs-12 link">{{obj.jobTitle}}</div>
             <div class="col-xs-12">{{obj.DatePosted}}</div>
             <div ng-if="obj.isJobPostNew === true" class="col-xs-12"><span class="label label-success">New</span></div>
         </div>
     </div>
-
 
 <!--<table class="table jobTable">
         <thead>

@@ -4,11 +4,12 @@
         .module('app')
         .controller('ViewController', ViewController);
 
-    ViewController.$inject = ['$state'];
+    ViewController.$inject = ['$state','ViewService'];
 
-    function ViewController($state,stateParams) {
+    function ViewController($state, ViewService) {
         var vm = this;
         vm.jobId = undefined;
+        vm.jobView = undefined;
 
         vm.Navigate = navigate;
 
@@ -30,7 +31,10 @@
         }
 
         function getJob() {
-            console.log(getJobId());
+            ViewService.GetJob(getJobId()).then(function(data) {
+                console.log(data);
+                vm.jobView = data;
+            });
         }
 
 
