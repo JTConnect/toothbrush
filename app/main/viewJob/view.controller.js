@@ -33,8 +33,9 @@
         function getJob() {
             ViewService.GetJob(getJobId()).then(function(data) {
                 vm.jobView = data;
-                setTweetThisJobUrl(vm.jobView);
+                vm.twitterTweetUrl = getTweetThisJobUrl(vm.jobView);
                 vm.linkedinUrl = getLinkedinUrl(vm.jobView);
+                vm.mailUrl = getMailTo(vm.jobView);
             });
         }
 
@@ -72,13 +73,21 @@
             return "&text=" + encodeURIComponent(value.companyname + " is now hiring a " + value.jobtitle + "!");
         }
 
-        function setTweetThisJobUrl(job) {
+        function getTweetThisJobUrl(job) {
             var twitterTweetDomain = getTwitterTweetUrl();
             var related = getTwitterTweetRelated();
             var text = getTwitterTweetText(job);
             var url = "&url=" + getPageUrl();
 
-            vm.twitterTweetUrl = twitterTweetDomain + related + text + url;
+            return twitterTweetDomain + related + text + url;
+        }
+
+        function getMailTo(job) {
+            var mailto = "mailto:" + job.companyemail;
+            var subject = "?subject=" + encodeURIComponent(job.companyname + "is now hiring!");
+            var body = "&body=" + encodeURIComponent(job.companyname + "is looking for a " + job.jobtitle + "! - " + $window.location.href);
+
+            return mailto + subject + body;
         }
     }
 })();
