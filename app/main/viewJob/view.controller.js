@@ -10,7 +10,7 @@
         var vm = this;
         vm.jobId = undefined;
         vm.jobView = undefined;
-
+        vm.linkedinUrl = undefined;
         vm.Navigate = navigate;
 
         function navigate(route) {
@@ -34,6 +34,7 @@
             ViewService.GetJob(getJobId()).then(function(data) {
                 vm.jobView = data;
                 setTweetThisJobUrl(vm.jobView);
+                vm.linkedinUrl = getLinkedinUrl(vm.jobView);
             });
         }
 
@@ -51,6 +52,16 @@
 
         function getTwitterTweetUrl() {
             return "https://twitter.com/intent/tweet";
+        }
+
+        function getLinkedinUrl(obj) {
+            var url = encodeURIComponent(getPageUrl());
+            var title = encodeURIComponent("IHeartRemoteWork");
+            var source = encodeURIComponent("IHeartRemoteWork.com")
+            var summary = encodeURIComponent(obj.companyname + "is now hiring a" + obj.jobtitle);
+
+            return "https://www.linkedin.com/shareArticle?mini=true&url=" + url + "&title="
+                + title + "&summary=" + summary + "&source=" + source;
         }
 
         function getTwitterTweetRelated() {

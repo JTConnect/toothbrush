@@ -277,3 +277,11 @@ body {
 .bColor-yellow {
     background-color: yellow;
 }
+
+.text-size15 {
+    font-size: 15px;
+}
+
+.linkedinColor {
+    color:#287bbc;
+}
