@@ -59,10 +59,10 @@
             var url = encodeURIComponent(getPageUrl());
             var title = encodeURIComponent("IHeartRemoteWork");
             var source = encodeURIComponent("IHeartRemoteWork.com")
-            var summary = encodeURIComponent(obj.companyname + "is now hiring a" + obj.jobtitle);
+            var summary = encodeURIComponent(obj.companyname + " is now hiring a " + obj.jobtitle);
 
-            return "https://www.linkedin.com/shareArticle?mini=true&url=" + url + "&title="
-                + title + "&summary=" + summary + "&source=" + source;
+            return "https://www.linkedin.com/shareArticle?mini=true&url=" + getPageUrl() + "&title=" + title +
+            "&summary=" + summary;
         }
 
         function getTwitterTweetRelated() {

@@ -3,8 +3,8 @@
     <div ng-repeat="obj in vm.jobs | filter:vm.text" class="text" ng-click="vm.navigate(obj)">
         <div class="row horizontalRule visible-sm-block visible-md-block visible-lg-block">
             <div class="col-sm-2 text-bold">{{obj.companyName}}</div>
-            <div class="col-sm-7 link textSmaller">
-                {{obj.jobTitle}}
+            <div class="col-sm-7">
+                <span class="link textSmaller">{{obj.jobTitle}}</span>
                 <span ng-if="obj.isJobPostNew === true" class="label label-success text-size15">New</span>
 
             </div>

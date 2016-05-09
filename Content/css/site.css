@@ -282,6 +282,14 @@ body {
     font-size: 15px;
 }
 
+.fSize18 {
+    font-size: 18px;
+}
+
 .linkedinColor {
     color:#287bbc;
+}
+
+.w750 {
+    width: 750px;
 }
