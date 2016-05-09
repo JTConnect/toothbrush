@@ -83,9 +83,9 @@
         }
 
         function getMailTo(job) {
-            var mailto = "mailto:" + job.companyemail;
-            var subject = "?subject=" + encodeURIComponent(job.companyname + "is now hiring!");
-            var body = "&body=" + encodeURIComponent(job.companyname + "is looking for a " + job.jobtitle + "! - " + $window.location.href);
+            var mailto = "mailto:";
+            var subject = "?subject=" + encodeURIComponent(job.companyname + " is now hiring!");
+            var body = "&body=" + encodeURIComponent(job.companyname + " is looking for a " + job.jobtitle + "! - " + $window.location.href);
 
             return mailto + subject + body;
         }
