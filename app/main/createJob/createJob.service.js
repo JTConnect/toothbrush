@@ -41,7 +41,7 @@
                 description: jobObject.JobDescription,
                 howtoapply: jobObject.Apply,
                 feature: jobObject.Feature,
-                company: {name: jobObject.CompanyName, url: jobObject.CompanyUrl, email: jobObject.CompanyEmail, companylogo : jobObject.CompanyLogo},
+                company: {name: jobObject.CompanyName, url: jobObject.CompanyUrl, email: jobObject.CompanyEmail, companylogo : jobObject.CompanyLogo, location: jobObject.CompanyLocation},
                 payment: {days: 30, token: jobObject.token}
             };
 

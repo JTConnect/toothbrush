@@ -33,6 +33,8 @@
         function getJob() {
             ViewService.GetJob(getJobId()).then(function(data) {
                 vm.jobView = data;
+                console.log(vm.jobView);
+                console.log(vm.jobView.companylogo);
                 vm.twitterTweetUrl = getTweetThisJobUrl(vm.jobView);
                 vm.linkedinUrl = getLinkedinUrl(vm.jobView);
                 vm.mailUrl = getMailTo(vm.jobView);

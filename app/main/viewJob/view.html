@@ -10,14 +10,16 @@
     </div>
 
     <div class="row">
-        <div class="col-sm-6">
+        <div class="col-sm-8">
             <h2>
                 {{vm.jobView.jobtitle}} <br/>
             </h2>
             POSTED {{vm.jobView.jobcreatedon}}
         </div>
-        <div class="col-sm-6">
-
+        <div class="col-sm-4">
+            <div class="post-job-companylogo">
+                <img ng-src="{{vm.jobView.companylogo}}" />
+            </div>
         </div>
     </div>
 
@@ -25,8 +27,8 @@
         <div class="col-sm-6">
             <h3>
                 {{vm.jobView.companyname}} <br/>
-                {{vm.jobView.location}} <br/>
-                <a ng-href="{{vm.viewJob.CompanyUrl}}" target="_blank">{{vm.viewJob.companyUrl}}</a>
+                HQ: {{vm.jobView.companylocation}} <br/>
+                <a ng-href="{{vm.jobView.companyurl}}" target="_blank">{{vm.jobView.companyurl}}</a>
             </h3>
         </div>
         <div class="col-sm-6">
