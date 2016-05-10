@@ -24,6 +24,8 @@
                 vm.newJobPosting.JobDescription = "";
 
             setFileOnChangeEventHandler();
+
+            if(!getCompanyLogoUrl()) setCompanyLogoUrl("/content/images/DefaultLogo.png");
         }
 
         //Rich Text Editor Components here
@@ -167,6 +169,10 @@
 
         function setCompanyLogoUrl(url) {
             vm.newJobPosting.CompanyLogo = url;
+        }
+
+        function getCompanyLogoUrl() {
+            return vm.newJobPosting.CompanyLogo;
         }
     }
 })();
