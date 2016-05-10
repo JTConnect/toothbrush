@@ -96,6 +96,21 @@
                     </div>
 
                     <div class="col-sm-12">
+                        <div class="form-group">
+                            <label class="text">Logo:</label>
+                            <input type="file" id="companylogo_input"/>
+
+                            <br />
+
+                            <div class="post-job-companylogo">
+                                <img id="preview" src="/toothbrush/content/images/DefaultLogo.png" />
+                                <p class="text" style="padding-left:28px;">190px wide is optimal</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12">
                         <div class="form-group" ng-class="{'has-error' : vm.postForm.howApply.$invalid && !vm.postForm.howApply.$pristine || (vm.submitted && vm.postForm.howApply.$invalid) }">
                             <label class="text">How do job seekers apply to your {{vm.newJobPosting.JobTitle}} position.</label>
                             <textarea type="text" name="howApply" ng-model="vm.newJobPosting.Apply" placeholder="Ex: Send your resume to james@company.com or Visit www.company.com/careers/apply " class="form-control" rows="3" required></textarea>

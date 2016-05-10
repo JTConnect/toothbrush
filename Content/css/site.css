@@ -290,6 +290,11 @@ body {
     color:#287bbc;
 }
 
+
+.post-job-companylogo img {
+    width:190px;
+}
+
 .w750 {
     width: 750px;
 }

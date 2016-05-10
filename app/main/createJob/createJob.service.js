@@ -41,13 +41,14 @@
                 description: jobObject.JobDescription,
                 howtoapply: jobObject.Apply,
                 feature: jobObject.Feature,
-                company: {name: jobObject.CompanyName, url: jobObject.CompanyUrl, email: jobObject.CompanyEmail},
+                company: {name: jobObject.CompanyName, url: jobObject.CompanyUrl, email: jobObject.CompanyEmail, companylogo : jobObject.CompanyLogo},
                 payment: {days: 30, token: jobObject.token}
             };
 
             return HttpRequestService.Go({
                 method: 'POST',
                 url: 'http://resourceserver.herokuapp.com/api/job/updateJob',
+                //url: 'http://localhost:3050/api/job/updateJob',
                 data: jobPostingObject
             });
         }
