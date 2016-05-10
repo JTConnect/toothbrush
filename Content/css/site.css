@@ -294,14 +294,13 @@ img {border:none;}
 
 
 .post-job-companylogo img {
-    width:190px;
+    max-width: 120px;
+    max-height: 120px;
 }
 
 .view-job-companylogo img {
-    width:190px;
-}
-
-.view-job-companylogo{
+    max-width: 190px;
+    max-height: 120px;
     padding-top:15px;
 }
 
