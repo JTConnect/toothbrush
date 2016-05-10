@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b139dee7-33a9-41b8-be8d-91f4354948f2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/main/createJob/createJob.service.js" afterPath="$PROJECT_DIR$/app/main/createJob/createJob.service.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Content/css/site.css" afterPath="$PROJECT_DIR$/Content/css/site.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/main/viewJob/view.controller.js" afterPath="$PROJECT_DIR$/app/main/viewJob/view.controller.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/main/viewJob/view.html" afterPath="$PROJECT_DIR$/app/main/viewJob/view.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -30,16 +28,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="view.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="view.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/main/viewJob/view.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8965517" vertical-offset="75" max-vertical-offset="1335">
-              <caret line="31" column="17" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
+            <state vertical-scroll-proportion="-10.0" vertical-offset="75" max-vertical-offset="1335">
+              <caret line="21" column="18" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
               <folding>
                 <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#div#1;n#div#3;n#div#1;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#div#1;n#div#3;n#div#1;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#a#0;n#li#2;n#ul#0;n#div#1;n#div#3;n#div#1;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="site.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Content/css/site.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.22875817" vertical-offset="0" max-vertical-offset="4770">
+              <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -79,10 +87,10 @@
         <option value="$PROJECT_DIR$/app/main/home/home.controller.js" />
         <option value="$PROJECT_DIR$/app/main/createJob/postJob/postJob.controller.js" />
         <option value="$PROJECT_DIR$/app/main/createJob/postJob/postJob.html" />
-        <option value="$PROJECT_DIR$/Content/css/site.css" />
         <option value="$PROJECT_DIR$/app/main/createJob/createJob.service.js" />
         <option value="$PROJECT_DIR$/app/main/viewJob/view.controller.js" />
         <option value="$PROJECT_DIR$/app/main/viewJob/view.html" />
+        <option value="$PROJECT_DIR$/Content/css/site.css" />
       </list>
     </option>
   </component>
@@ -92,8 +100,8 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="113" />
-    <option name="y" value="22" />
+    <option name="x" value="241" />
+    <option name="y" value="239" />
     <option name="width" value="1154" />
     <option name="height" value="774" />
   </component>
@@ -526,7 +534,7 @@
     <option name="totallyTimeSpent" value="15486000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="113" y="22" width="1154" height="774" extended-state="0" />
+    <frame x="241" y="239" width="1154" height="774" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -671,14 +679,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Content/css/site.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="4146" max-vertical-offset="4605">
-          <caret line="301" column="0" selection-start-line="301" selection-start-column="0" selection-end-line="301" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/main/createJob/postJob/postJob.controller.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1866" max-vertical-offset="2655">
@@ -721,13 +721,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/main/viewJob/view.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8965517" vertical-offset="75" max-vertical-offset="1335">
-          <caret line="31" column="17" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
+        <state vertical-scroll-proportion="-10.0" vertical-offset="75" max-vertical-offset="1335">
+          <caret line="21" column="18" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
           <folding>
             <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#div#1;n#div#3;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#div#1;n#div#3;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#li#2;n#ul#0;n#div#1;n#div#3;n#div#1;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Content/css/site.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.22875817" vertical-offset="0" max-vertical-offset="4770">
+          <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>

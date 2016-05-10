@@ -1,9 +1,11 @@
 ﻿/* numbered buttons */
 
 body {
-   background-color: #f2f2f2;
+   /*background-color: #f2f2f2;*/
+   background-color:#fff;
 }
 
+img {border:none;}
 
 #status-buttons a
 {
@@ -293,9 +295,18 @@ body {
 
 .post-job-companylogo img {
     width:190px;
-    overflow: hidden;
+}
+
+.view-job-companylogo img {
+    width:190px;
+}
+
+.view-job-companylogo{
+    padding-top:15px;
 }
 
 .w750 {
     width: 750px;
 }
+
+
