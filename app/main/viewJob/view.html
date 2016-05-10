@@ -10,28 +10,23 @@
     </div>
 
     <div class="row">
-        <div class="col-sm-8">
+        <div class="col-sm-8 view-post-header">
+            <h1>
+                {{vm.jobView.jobtitle}}
+            </h1>
+            <h3>POSTED {{vm.jobView.jobcreatedon}}</h3>
             <h2>
-                {{vm.jobView.jobtitle}} <br/>
+                <span> {{vm.jobView.companyname}}</span>
+                <br />
+                <span>Headquarters: {{vm.jobView.companylocation}}</span>
+                <br />
+                <a ng-href="{{vm.jobView.companyurl}}" target="_blank">{{vm.jobView.companyurl}}</a>
             </h2>
-            POSTED {{vm.jobView.jobcreatedon}}
         </div>
         <div class="col-sm-4">
             <div class="view-job-companylogo">
                 <img ng-src="{{vm.jobView.companylogo}}" />
             </div>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-sm-6">
-            <h3>
-                {{vm.jobView.companyname}} <br/>
-                Headquarters: {{vm.jobView.companylocation}} <br/>
-                <a ng-href="{{vm.jobView.companyurl}}" target="_blank">{{vm.jobView.companyurl}}</a>
-            </h3>
-        </div>
-        <div class="col-sm-6">
         </div>
     </div>
 

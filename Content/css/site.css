@@ -301,11 +301,26 @@ img {border:none;}
 .view-job-companylogo img {
     max-width: 190px;
     max-height: 120px;
-    padding-top:15px;
 }
 
 .w750 {
     width: 750px;
+}
+
+.view-post-header h3 {
+    font-size: 1.3rem;
+    color: #888;
+    margin: 0 0 20px 0;
+    line-height: 1em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.view-post-header h2 {
+    font-size: 1.9rem;
+    padding: 0 0 10px 0;
+    margin: 0;
+    line-height: 1.4em;
 }
 
 
