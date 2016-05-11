@@ -3,9 +3,9 @@
         .module('app')
         .controller('PostJobController', PostJobController);
 
-    PostJobController.$inject = ['CreateJobService', '$state'];
+    PostJobController.$inject = ['CreateJobService', '$state', 'ParseTextService'];
 
-    function PostJobController(CreateJobService, $state) {
+    function PostJobController(CreateJobService, $state, ParseTextService) {
         var vm = this;
         vm.newJobPosting = CreateJobService.GetJobPosting() || {};
         vm.categories = [];
@@ -113,6 +113,7 @@
             contents.elements[textAreaNameStr()].value = editorName().document.body.innerHTML;
 
             vm.newJobPosting.JobDescription = contents.elements[textAreaNameStr()].value;
+            vm.newJobPosting.HtmlStringApply = ParseTextService.convertToLinks(vm.newJobPosting.Apply);
 
             CreateJobService.SaveJobPosting(vm.newJobPosting);
             $state.go('root.appLayout.createJob.previewJob');

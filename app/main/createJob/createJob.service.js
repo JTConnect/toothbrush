@@ -39,7 +39,7 @@
                 title: jobObject.JobTitle,
                 categoryid: jobObject.CategoryID,
                 description: jobObject.JobDescription,
-                howtoapply: jobObject.Apply,
+                howtoapply: jobObject.HtmlStringApply,
                 feature: jobObject.isFeatured,
                 company: {name: jobObject.CompanyName, url: jobObject.CompanyUrl, email: jobObject.CompanyEmail, companylogo : jobObject.CompanyLogo, location: jobObject.CompanyLocation},
                 payment: {days: 30, token: jobObject.token}
