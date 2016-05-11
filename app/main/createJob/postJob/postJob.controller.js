@@ -29,6 +29,9 @@
         }
 
         //Rich Text Editor Components here
+        vm.boldIsActive = false;
+        vm.italicIsActive = false;
+        vm.underlineIsActive = false;
         vm.Italic = italic;
         vm.Bold = bold;
         vm.UnderLine = underline;
@@ -62,41 +65,46 @@
         ];
 
         function fontSize() {
+            focusArea();
             var size = vm.selectedSize;
             editorName().document.execCommand('FontSize', false, size);
         }
-
         function italic() {
+            focusArea();
+            vm.italicIsActive = !vm.italicIsActive;
             editorName().document.execCommand('italic', false, null);
         }
         function bold() {
+            focusArea();
+            vm.boldIsActive = !vm.boldIsActive;
             editorName().document.execCommand('bold', false, null);
         }
         function underline() {
+            focusArea();
+            vm.underlineIsActive = !vm.underlineIsActive;
             editorName().document.execCommand('underline', false, null);
         }
-
         function unOrderedList() {
+            focusArea();
             editorName().document.execCommand('InsertUnOrderedList', false, "newUL");
         }
-
         function orderedList() {
+            focusArea();
             editorName().document.execCommand('InsertOrderedList', false, "newOL");
         }
-
         function link() {
             var url = prompt("Enter the url you would like to add: ", "http://");
             editorName().document.execCommand('CreateLink', false, url);
         }
-
+        function focusArea(){
+            return document.getElementById("richTextField").contentWindow.document.body.focus();
+        }
         function editorName() {
             return window.frames.richTextField;
         }
-
         function textAreaNameStr() {
             return "plainTextArea";
         }
-
         function postJob() {
             vm.submitted = true;
             if (vm.postForm.$invalid || vm.newJobPosting.CategoryID === undefined) return;
@@ -109,7 +117,6 @@
             CreateJobService.SaveJobPosting(vm.newJobPosting);
             $state.go('root.appLayout.createJob.previewJob');
         }
-
         function getCategories() {
             console.log("start get categories");
             CreateJobService.GetCategories().then(function (data) {
@@ -118,7 +125,6 @@
                 console.log(err);
             });
         }
-
         function setFileOnChangeEventHandler() {
             var fileInput = document.getElementById("companylogo_input");
 
@@ -133,7 +139,6 @@
                 }
             };
         }
-
         function get_signed_request(file){
             var xhr = new XMLHttpRequest();
             xhr.open("GET", "http://resourceserver.herokuapp.com/sign_s3?file_name="+ file.name + "&file_type="+file.type + "&bucketName=" + "iheartremotework");
@@ -150,7 +155,6 @@
             };
             xhr.send();
         }
-
         function upload_file(file, signed_request, url){
             var xhr = new XMLHttpRequest();
             xhr.open("PUT", signed_request);
@@ -166,11 +170,9 @@
             };
             xhr.send(file);
         }
-
         function setCompanyLogoUrl(url) {
             vm.newJobPosting.CompanyLogo = url;
         }
-
         function getCompanyLogoUrl() {
             return vm.newJobPosting.CompanyLogo;
         }
