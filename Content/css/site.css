@@ -262,6 +262,11 @@ img {border:none;}
     margin-bottom: 40px;
 }
 
+.mBottom60 {
+    margin-bottom: 60px;
+}
+
+
 .mLeft10 {
     margin-left: 10px;
 }
@@ -321,6 +326,10 @@ img {border:none;}
     padding: 0 0 10px 0;
     margin: 0;
     line-height: 1.4em;
+}
+
+.word-wrap {
+    word-wrap: break-word;
 }
 
 

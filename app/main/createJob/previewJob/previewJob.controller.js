@@ -13,6 +13,7 @@
         function activate() {
             vm.message = "Perfect! Next";
             vm.previewJob = CreateJobService.GetJobPosting();
+            vm.todaysDate = moment().format("MMM Do");
 
             if(!vm.previewJob) {$state.go('root.appLayout.createJob.postAJob'); }
 

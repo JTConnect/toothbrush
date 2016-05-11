@@ -11,54 +11,66 @@
     </div>
 </div>
 
-<div class="apply mBottom20">
+<div class="bottomSpace">
     <div class="row">
-        <div class="col-sm-12">
-            <h1>{{vm.previewJob.JobTitle}}</h1>
-            <hr/>
-        </div>
-        <div class="col-sm-12">
-            <h2>{{vm.previewJob.CompanyName}},
-                <small><a ng-href="{{vm.previewJob.CompanyUrl}}" target="_blank">{{vm.previewJob.CompanyUrl}}</a></small>
+        <div class="col-sm-8 col-xs-12 view-post-header">
+            <h1>
+                {{vm.previewJob.JobTitle}}
+            </h1>
+            <h3>POSTED {{vm.todaysDate}}</h3>
+            <h2>
+                <span> {{vm.previewJob.CompanyName}}</span>
+                <br />
+                <span>Headquarters: {{vm.previewJob.CompanyLocation}}</span>
+                <br />
+                <a ng-href="{{vm.previewJob.CompanyUrl}}" target="_blank">{{vm.previewJob.CompanyUrl}}</a>
             </h2>
-            <hr/>
         </div>
-        <div class="col-sm-12">
-            <h2><span class="glyphicon glyphicon-map-marker text-blue"></span><span class="text-bold">{{vm.previewJob.CompanyLocation}}</span></h2>
-            <hr/>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-sm-12"><div ng-bind-html="vm.previewJob.JobDescription"></div> <hr/></div>
-        <div class="col-sm-12">
-            <i class="fa fa-info-circle text-blue pull-left" aria-hidden="true"></i>
-            Make sure your description is as descriptive as possible.
-        </div>
-        </div>
-    </div>
-</div>
-
-<div class="apply mBottom20" >
-    <div class="row">
-        <div class="col-sm-12">
-            <div>
-                <h2>How to Apply?</h2>
-                <hr/>
+        <div class="col-sm-4 col-xs-12">
+            <div class="view-job-companylogo">
+                <img ng-src="{{vm.previewJob.CompanyLogo}}" />
             </div>
-
-            <div>{{vm.previewJob.Apply}}</div>
         </div>
     </div>
-</div>
 
-<div class="row mBottom20">
-    <div class="col-sm-12 col-xs-12">
-        <div class="btn-group pull-right">
-            <button class="btn btn-warning" ui-sref="root.appLayout.createJob.postAJob">
-                <i class="fa fa-pencil-square-o"></i> Make changes?
-            </button>
-            <button class="btn btn-primary" ui-sref="root.appLayout.createJob.payJobPost">{{vm.message}} &raquo;</button>
+    <hr/>
+
+    <div class="row">
+        <div class="col-sm-8 col-xs-12">
+            <div class="apply mBottom20 word-wrap">
+                <div ng-bind-html="vm.previewJob.JobDescription"></div>
+            </div>
         </div>
     </div>
+
+    <div class="row">
+        <div class="col-sm-8 col-xs-12">
+            <div class="apply">
+                <span class="text-bold">APPLY FOR THIS POSITION</span>
+                <br/>
+                <div class="word-wrap" ng-bind-html="vm.previewJob.Apply"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mBottom20"></div>
+
+    <div class="row">
+        <div class="col-sm-8 col-xs-12">
+            <div class="btn-group pull-right">
+                <button class="btn btn-warning" ui-sref="root.appLayout.createJob.postAJob">
+                    <i class="fa fa-pencil-square-o"></i> Make changes?
+                </button>
+                <button class="btn btn-primary" ui-sref="root.appLayout.createJob.payJobPost">{{vm.message}} &raquo;</button>
+            </div>
+        </div>
+    </div>
+
 </div>
+
+
+
+
+
+
+
