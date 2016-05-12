@@ -1,22 +1,26 @@
 <div class="row"><div class="col-sm-12 tableText">{{vm.title}}</div></div>
 
     <div ng-repeat="obj in vm.jobs | filter:vm.text" class="text" ng-click="vm.navigate(obj)">
-        <div class="row horizontalRule visible-sm-block visible-md-block visible-lg-block">
-            <div class="col-sm-2 text-bold">{{obj.companyName}}</div>
+        <div class="row horizontalRule visible-sm-block visible-md-block visible-lg-block" ng-class="{'feature': obj.isJobPostNew}">
+            <div class="col-sm-3 fSize25 text-black">{{obj.companyName}}</div>
             <div class="col-sm-7">
-                <span class="link textSmaller">{{obj.jobTitle}}</span>
-                <span ng-if="obj.isJobPostNew === true" class="label label-success text-size15">New</span>
+                <span class="link fSize25">{{obj.jobTitle}}</span>
+                <span ng-if="obj.isJobPostNew === true">
+                    <img src="/Content/images/NewLabel2.png" width="80">
+                </span>
 
             </div>
-            <div class="col-sm-3">
-                <span class="pull-right text-size15">{{obj.jobCreatedOn}}</span>
+            <div class="col-sm-2">
+                <span class="pull-right fSize25">{{obj.jobCreatedOn}}</span>
             </div>
         </div>
-        <div class="row horizontalRule visible-xs-block">
-            <div class="col-xs-12 text-bold">{{obj.companyName}}</div>
-            <div class="col-xs-12 link">{{obj.jobTitle}}</div>
-            <div class="col-xs-12 text-size15">{{obj.jobCreatedOn}}</div>
-            <div ng-if="obj.isJobPostNew === true" style="margin-top: 5px" class="col-xs-12"><span style="font-size: 15px;" class="label label-success">New</span></div>
+        <div class="row horizontalRule visible-xs-block" ng-class="{'feature': obj.isJobPostNew}">
+            <div class="col-xs-12 text-black fSize25">{{obj.companyName}}</div>
+            <div class="col-xs-12 link fSize25">{{obj.jobTitle}}</div>
+            <div class="col-xs-12 fSize25">{{obj.jobCreatedOn}}</div>
+            <div ng-if="obj.isJobPostNew === true" style="margin-top: 5px" class="col-xs-12">
+                <!--<span class="label label-success fSize20">New</span></div>-->
+                <img src="/Content/images/NewLabel2.png" width="85px">
         </div>
     </div>
 
