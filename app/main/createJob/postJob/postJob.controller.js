@@ -16,20 +16,23 @@
         function activate() {
             getCategories();
 
-            editorName().document.designMode = 'On';
+
+
+
+        /**    editorName().document.designMode = 'On';
 
             if (vm.newJobPosting.JobDescription != null || vm.newJobPosting.JobDescription != undefined)
                 editorName().document.body.innerHTML = vm.newJobPosting.JobDescription;
             else
-                vm.newJobPosting.JobDescription = "";
+                vm.newJobPosting.JobDescription = "";**/
 
-            setFileOnChangeEventHandler();
+        setFileOnChangeEventHandler();
 
             if(!getCompanyLogoUrl()) setCompanyLogoUrl("/content/images/DefaultLogo.png");
         }
 
         //Rich Text Editor Components here
-        vm.boldIsActive = false;
+       /** vm.boldIsActive = false;
         vm.italicIsActive = false;
         vm.underlineIsActive = false;
         vm.Italic = italic;
@@ -104,15 +107,17 @@
         }
         function textAreaNameStr() {
             return "plainTextArea";
-        }
+        } **/
+
         function postJob() {
             vm.submitted = true;
             if (vm.postForm.$invalid || vm.newJobPosting.CategoryID === undefined) return;
 
-            var contents = document.getElementById("postForm");
+           /** var contents = document.getElementById("postForm");
             contents.elements[textAreaNameStr()].value = editorName().document.body.innerHTML;
 
-            vm.newJobPosting.JobDescription = contents.elements[textAreaNameStr()].value;
+            vm.newJobPosting.JobDescription = contents.elements[textAreaNameStr()].value; **/
+
             vm.newJobPosting.HtmlStringApply = ParseTextService.convertToLinks(vm.newJobPosting.Apply);
 
             CreateJobService.SaveJobPosting(vm.newJobPosting);
