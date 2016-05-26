@@ -3,9 +3,9 @@
         .module('app')
         .controller('PayJobController', PayJobController);
 
-    PayJobController.$inject = ['CreateJobService', 'PaymentService', '$state', '$scope'];
+    PayJobController.$inject = ['CreateJobService', 'PaymentService', '$state', '$scope', '$timeout'];
 
-    function PayJobController(CreateJobService, PaymentService, $state, $scope) {
+    function PayJobController(CreateJobService, PaymentService, $state, $scope, $timeout) {
         var vm = this;
 
         vm.message = "Perfect! Last Step";
@@ -30,6 +30,11 @@
                     ShowError(err.errorMessage);
                 }else {
                     var jobObject = getJobPostingObject();
+                    jobObject.CompanyLogo = (jobObject.CompanyLogo == "/content/images/DefaultLogo.png") ? "" : jobObject.CompanyLogo;
+
+                    console.log(jobObject.CompanyLogo);
+                    console.log('Posted above');
+
                     jobObject.token = result.token;
 
                     //placeholder need feature property set at create job job
@@ -38,7 +43,14 @@
                     var jobPromise = CreateJobService.PersistJobPost(jobObject);
 
                     jobPromise.then(function(result) {
+                        CreateJobService.SaveJobPosting(null);
+
                         vm.submitButtonText = "Success, Job has been Posted!";
+
+                        $timeout(function() {
+                            $state.go('root.home');
+                        }, 1000);
+
                     }).catch(function(err) {
                         ShowError(err.errorMessage);
                     });

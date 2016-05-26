@@ -7,26 +7,18 @@
 
     function PostJobController(CreateJobService, $state, ParseTextService) {
         var vm = this;
-        vm.newJobPosting = CreateJobService.GetJobPosting() || {};
         vm.categories = [];
 
         vm.PostJob = postJob;
 
         activate();
         function activate() {
+            vm.newJobPosting = CreateJobService.GetJobPosting();
+            if(!vm.newJobPosting) vm.newJobPosting = { isFeatured: false };
+
             getCategories();
 
-
-
-
-        /**    editorName().document.designMode = 'On';
-
-            if (vm.newJobPosting.JobDescription != null || vm.newJobPosting.JobDescription != undefined)
-                editorName().document.body.innerHTML = vm.newJobPosting.JobDescription;
-            else
-                vm.newJobPosting.JobDescription = "";**/
-
-        setFileOnChangeEventHandler();
+            setFileOnChangeEventHandler();
 
             if(!getCompanyLogoUrl()) setCompanyLogoUrl("/content/images/DefaultLogo.png");
         }
