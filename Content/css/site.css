@@ -203,7 +203,7 @@ img {border:none;}
     color: rgba(0,0,0,.54);
     font-size: 13px;
     overflow: hidden;
-    width: 90%;
+    width: 100%;
     -webkit-tap-highlight-color: #a3daff;
 }
 
