@@ -27,7 +27,7 @@
             </h2>
         </div>
         <div class="col-sm-4 col-xs-12">
-            <div class="view-job-companylogo">
+            <div ng-if="!(vm.previewJob.CompanyLogo == '/content/images/DefaultLogo.png')" class="view-job-companylogo">
                 <img ng-src="{{vm.previewJob.CompanyLogo}}" />
             </div>
         </div>
