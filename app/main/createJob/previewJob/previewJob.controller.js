@@ -16,8 +16,6 @@
             vm.todaysDate = moment().format("MMM Do");
 
             if(!vm.previewJob) {$state.go('root.appLayout.createJob.postAJob'); }
-
-            vm.previewJob.CompanyUrl = "http://" + vm.previewJob.CompanyUrl;
         }
     }
 })();

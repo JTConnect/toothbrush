@@ -21,11 +21,9 @@
 
             function convertToMailLinks(text) {
                 var mailRegex = /([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9._-]+)/gi;
-                var t = text.replace(mailRegex, function(mail) {
+                return text.replace(mailRegex, function(mail) {
                    return '<a href="mailto:' + mail + '">' + mail +  '</a>';
                 });
-
-                return t;
             }
         }
 })();

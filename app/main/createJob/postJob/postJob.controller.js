@@ -113,13 +113,10 @@
             vm.submitted = true;
             if (vm.postForm.$invalid || vm.newJobPosting.CategoryID === undefined) return;
 
-           /** var contents = document.getElementById("postForm");
-            contents.elements[textAreaNameStr()].value = editorName().document.body.innerHTML;
-
-            vm.newJobPosting.JobDescription = contents.elements[textAreaNameStr()].value; **/
-
             vm.newJobPosting.HtmlStringApply = ParseTextService.convertToLinks(vm.newJobPosting.Apply);
             vm.newJobPosting.HtmlStringApply = ParseTextService.convertToMailLinks(vm.newJobPosting.HtmlStringApply);
+            vm.newJobPosting.CompanyUrl = appendHttpToCompanyUrl(vm.newJobPosting.CompanyUrl);
+
 
             CreateJobService.SaveJobPosting(vm.newJobPosting);
             $state.go('root.appLayout.createJob.previewJob');
@@ -182,6 +179,19 @@
         }
         function getCompanyLogoUrl() {
             return vm.newJobPosting.CompanyLogo;
+        }
+
+        function appendHttpToCompanyUrl(url) {
+            if(!url) return;
+
+            url = url.toLowerCase();
+
+            var regExpression = new RegExp("^(http|https)://", "i");
+            var match = regExpression.test(url);
+
+            if(match) return url;
+
+            return "http://" + url;
         }
     }
 })();
