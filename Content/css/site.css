@@ -133,6 +133,7 @@ img {border:none;}
 .link {
     text-decoration: underline;
     color: #1aa3ff;
+    font-size: 20px;
    /* -webkit-tap-highlight-color: #a3daff; */
 }
 
@@ -331,21 +332,4 @@ img {border:none;}
     word-wrap: break-word;
 }
 
-.fSize30 {
-    font-size: 30px;
-}
 
-.fSize25 {
-    font-size: 25px;
-}
-
-.fSize20 {
-    font-size: 20px;
-}
-
-.text-black {
-    color: black !important;
-}
-.feature {
-    background-color: #ffc;
-}

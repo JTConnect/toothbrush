@@ -119,6 +119,7 @@
             vm.newJobPosting.JobDescription = contents.elements[textAreaNameStr()].value; **/
 
             vm.newJobPosting.HtmlStringApply = ParseTextService.convertToLinks(vm.newJobPosting.Apply);
+            vm.newJobPosting.HtmlStringApply = ParseTextService.convertToMailLinks(vm.newJobPosting.HtmlStringApply);
 
             CreateJobService.SaveJobPosting(vm.newJobPosting);
             $state.go('root.appLayout.createJob.previewJob');
