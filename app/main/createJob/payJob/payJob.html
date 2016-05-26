@@ -22,7 +22,7 @@
                     <td>{{vm.jobPost.CompanyName}}</td>
                     <td>Employement</td>
                     <td>{{vm.jobPost.CompanyEmail}}</td>
-                    <td><b>$150</b></td>
+                    <td><b>$150</b> <b ng-if="vm.jobPost.isFeatured"> + $25 = $175</b></td>
                     <td>
                         <button class="btn btn-info btn-lg" ui-sref="root.appLayout.createJob.postAJob">Edit?</button>
                     </td>
@@ -55,7 +55,7 @@
                     </tr>
                     <tr>
                         <td class="textColor">Total:</td>
-                        <td>$150</td>
+                        <td><b>$150</b> <b ng-if="vm.jobPost.isFeatured"> + $25 = $175</b></td>
                     </tr>
                     <tr>
                         <td class="textColor">Edit?</td>
