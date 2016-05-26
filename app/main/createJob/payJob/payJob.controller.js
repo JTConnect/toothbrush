@@ -32,9 +32,6 @@
                     var jobObject = getJobPostingObject();
                     jobObject.CompanyLogo = (jobObject.CompanyLogo == "/content/images/DefaultLogo.png") ? "" : jobObject.CompanyLogo;
 
-                    console.log(jobObject.CompanyLogo);
-                    console.log('Posted above');
-
                     jobObject.token = result.token;
 
                     //placeholder need feature property set at create job job
@@ -49,7 +46,7 @@
 
                         $timeout(function() {
                             $state.go('root.home');
-                        }, 1000);
+                        }, 500);
 
                     }).catch(function(err) {
                         ShowError(err.errorMessage);

@@ -114,7 +114,6 @@
             $state.go('root.appLayout.createJob.previewJob');
         }
         function getCategories() {
-            console.log("start get categories");
             CreateJobService.GetCategories().then(function (data) {
                 vm.categories = data.data.rows;
             }).catch(function (err) {
