@@ -7,6 +7,20 @@ body {
 
 img {border:none;}
 
+#newButton{
+  line-height:1;
+  font-size:15px;
+  margin-left:1px;
+  width:50px;
+  text-align:center;
+  color:orange;
+  padding:.2em .6em .3em;
+  border-style:solid;
+  border-color:orange;
+  border-width:1px;
+  border-radius:.25em;
+}
+
 #status-buttons a
 {
     color:black;
