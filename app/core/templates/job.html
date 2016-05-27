@@ -2,9 +2,9 @@
 
     <div ng-repeat="obj in vm.jobs | filter:vm.text" class="text" ng-click="vm.navigate(obj)">
         <div class="row horizontalRule visible-sm-block visible-md-block visible-lg-block" ng-class="{'feature': obj.feature}">
-            <div class="col-sm-3 fSize25 text-black">{{obj.companyName}}</div>
+            <div class="col-sm-3 view-post-header cBlack"><h2>{{obj.companyName}}</h2></div>
             <div class="col-sm-7">
-                <span class="link fSize25">{{obj.jobTitle}}</span>
+                <span class="link">{{obj.jobTitle}}</span>
                 <span style="padding-left:12px;" ng-if="obj.isJobPostNew === true">
                   <label type="button" id="newButton">New</label>
 <!--<span style="font-size: 15px;" class="label label-warning">NEW</span>-->
@@ -12,13 +12,13 @@
 
             </div>
             <div class="col-sm-2">
-                <span class="pull-right fSize25">{{obj.jobCreatedOn}}</span>
+                <span class="pull-right view-post-header"><h3>{{obj.jobCreatedOn}}</h3></span>
             </div>
         </div>
         <div class="row horizontalRule visible-xs-block" ng-class="{'feature': obj.feature}">
-            <div class="col-xs-12 text-black fSize25">{{obj.companyName}}</div>
+            <div class="col-xs-12 cBlack fSize25">{{obj.companyName}}</div>
             <div class="col-xs-12 link fSize25">{{obj.jobTitle}}</div>
-            <div class="col-xs-12 fSize25">{{obj.jobCreatedOn}}</div>
+            <div style="" class="col-xs-12 view-post-header fSize25">{{obj.jobCreatedOn}}</div>
             <div ng-if="obj.isJobPostNew === true" style="margin-top: 5px" class="col-xs-12">
               <label type="button" id="newButton">New</label>
 

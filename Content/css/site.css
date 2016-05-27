@@ -126,6 +126,11 @@ img {border:none;}
     color: #00bfff;
 }
 
+.cBlack
+{
+    color: black;
+}
+
 .text-center {
     text-align: center;
 }
