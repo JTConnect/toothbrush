@@ -353,3 +353,43 @@ img {border:none;}
 .feature {
     background-color:#ffc;
 }
+
+
+.contact-box {
+    width:100%;
+    height:150px;
+    border:1px #f9f9f9 solid;
+    border-radius:4px;
+    box-shadow: 0 0 1px 1px rgba(0,0,0,.35);
+}
+
+.contact-box .text {
+    text-align: center;
+    padding-top:15px;
+    color:#65737e;
+}
+
+.contact-us {
+    position:relative;
+    top:8px;
+    right:8px;
+    float:right;
+    color:#ffffff;
+    width:110px;
+    border:1px solid #ffffff;
+    border-radius:4px;
+    padding-left:5px;
+    padding-right:5px;
+    cursor:pointer;
+}
+
+@media (max-width:767px) {
+    .contact-us {
+        width:85px;
+        padding-left:10px;
+    }
+
+    .contact-us h4 {
+        font-size:12px;
+    }
+}

@@ -9,6 +9,7 @@
         var vm = this;
 
         vm.NavigateTo = navigateTo;
+        vm.Go = Go;
 
         activate();
         function activate() {
@@ -20,6 +21,9 @@
             $state.go('root.appLayout.createJob.postAJob');
         }
 
+        function Go(state) {
+            $state.go(state);
+        }
 
         function setUp() {
             HomeFactory.GetJobPostings().then(function(data) {

@@ -62,9 +62,13 @@
                     templateUrl: 'app/main/viewJob/view.html',
                     controller: 'ViewController',
                     controllerAs: 'vm'
+                })
+
+                .state('root.appLayout.contact', {
+                    url: '/contact',
+                    templateUrl: 'app/main/contact/contact.html',
+                    controller: 'ContactController',
+                    controllerAs: 'vm'
                 });
-
-
-
         }
 })();

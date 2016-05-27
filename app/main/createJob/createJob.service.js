@@ -47,11 +47,10 @@
 
             return HttpRequestService.Go({
                 method: 'POST',
-                url: 'http://resourceserver.herokuapp.com/api/job/updateJob',
+                url: 'https://resourceserver.herokuapp.com/api/job/updateJob',
                 //url: 'http://localhost:3050/api/job/updateJob',
                 data: jobPostingObject
             });
         }
     }
-
 })();
