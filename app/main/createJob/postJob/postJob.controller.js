@@ -10,6 +10,7 @@
         vm.categories = [];
 
         vm.PostJob = postJob;
+        vm.IsNullOrEmpty = isNullOrEmpty;
 
         activate();
         function activate() {
@@ -23,87 +24,9 @@
             if(!getCompanyLogoUrl()) setCompanyLogoUrl("/content/images/DefaultLogo.png");
         }
 
-        //Rich Text Editor Components here
-       /** vm.boldIsActive = false;
-        vm.italicIsActive = false;
-        vm.underlineIsActive = false;
-        vm.Italic = italic;
-        vm.Bold = bold;
-        vm.UnderLine = underline;
-        vm.UnOrderedList = unOrderedList;
-        vm.OrderedList = orderedList;
-        vm.Link = link;
-        vm.FontSize = fontSize;
-
-        vm.fontSize = [{
-            id: 12,
-            value: "1" // show user 12 
-        }, {
-            id: 13,
-            value: "2"
-        }, {
-            id: 14,
-            value: "3"
-        }, {
-            id: 15,
-            value: "4"
-        }, {
-            id:16,
-            value: "5"
-        }, {
-            id: 17,
-            value: "6"
-        }, {
-            id: 18,
-            value: "7"
-        }
-        ];
-
-        function fontSize() {
-            focusArea();
-            var size = vm.selectedSize;
-            editorName().document.execCommand('FontSize', false, size);
-        }
-        function italic() {
-            focusArea();
-            vm.italicIsActive = !vm.italicIsActive;
-            editorName().document.execCommand('italic', false, null);
-        }
-        function bold() {
-            focusArea();
-            vm.boldIsActive = !vm.boldIsActive;
-            editorName().document.execCommand('bold', false, null);
-        }
-        function underline() {
-            focusArea();
-            vm.underlineIsActive = !vm.underlineIsActive;
-            editorName().document.execCommand('underline', false, null);
-        }
-        function unOrderedList() {
-            focusArea();
-            editorName().document.execCommand('InsertUnOrderedList', false, "newUL");
-        }
-        function orderedList() {
-            focusArea();
-            editorName().document.execCommand('InsertOrderedList', false, "newOL");
-        }
-        function link() {
-            var url = prompt("Enter the url you would like to add: ", "http://");
-            editorName().document.execCommand('CreateLink', false, url);
-        }
-        function focusArea(){
-            return document.getElementById("richTextField").contentWindow.document.body.focus();
-        }
-        function editorName() {
-            return window.frames.richTextField;
-        }
-        function textAreaNameStr() {
-            return "plainTextArea";
-        } **/
-
         function postJob() {
             vm.submitted = true;
-            if (vm.postForm.$invalid || vm.newJobPosting.CategoryID === undefined) return;
+            if (vm.postForm.$invalid || vm.newJobPosting.CategoryID === undefined || isNullOrEmpty(vm.newJobPosting.JobDescription) ) return;
 
             vm.newJobPosting.HtmlStringApply = ParseTextService.convertToLinks(vm.newJobPosting.Apply);
             vm.newJobPosting.HtmlStringApply = ParseTextService.convertToMailLinks(vm.newJobPosting.HtmlStringApply);
@@ -113,6 +36,12 @@
             CreateJobService.SaveJobPosting(vm.newJobPosting);
             $state.go('root.appLayout.createJob.previewJob');
         }
+
+        function isNullOrEmpty(value) {
+            var result = (value == undefined || value == null || value.trim() == "");
+            return result;
+        }
+
         function getCategories() {
             CreateJobService.GetCategories().then(function (data) {
                 vm.categories = data.data.rows;
