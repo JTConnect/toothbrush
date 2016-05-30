@@ -18,6 +18,7 @@
             return HttpRequestService.Go(
                 {
                     url: "https://resourceserver.herokuapp.com/api/job/getJobPost/" + id,
+                    //url: "http://localhost:3050/api/job/getJobPost/" + id,
                     method: "GET"
                 });
         }
