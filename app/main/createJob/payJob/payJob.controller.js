@@ -49,14 +49,18 @@
                         }, 500);
 
                     }).catch(function(err) {
-                        var errorMessage = err;
+                        console.log(err);
+                        var errorMessage
+                            = err;
 
-                        if(errorMessage.indexOf('confirmationid ') > -1) {
+                        if(errorMessage.indexOf('confirmationid ') > -1)
+                        {
                             ShowError('Your credit card has been charged, and your job post is now live on our site for 30 days. ' +
                             'However, the confirmation email was not sent due to an invalid company email address. Please ' +
                             'keep a record of your confirmation id, which is ' + errorMessage.split(' ')[1].trim() + '. If you do ' +
                             'have any questions, please do get in contact with us!');
-                        }else {
+                        }else
+                        {
                             ShowError(err);
                         }
                     });
