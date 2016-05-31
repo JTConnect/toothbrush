@@ -65,7 +65,7 @@
         }
         function get_signed_request(file){
             var xhr = new XMLHttpRequest();
-            xhr.open("GET", "http://resourceserver.herokuapp.com/sign_s3?file_name="+ file.name + "&file_type="+file.type + "&bucketName=" + "iheartremotework");
+            xhr.open("GET", "https://resourceserver.herokuapp.com/sign_s3?file_name="+ file.name + "&file_type="+file.type + "&bucketName=" + "iheartremotework");
             xhr.onreadystatechange = function(){
                 if(xhr.readyState === 4){
                     if(xhr.status === 200){
