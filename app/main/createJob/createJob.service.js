@@ -21,6 +21,7 @@
             return HttpRequestService.Go(
                 {
                     url: "https://resourceserver.herokuapp.com/api/job/getcategories",
+                    //url: "http://localhost:3050/api/job/getcategories",
                     method: "GET"
                 });
         }
