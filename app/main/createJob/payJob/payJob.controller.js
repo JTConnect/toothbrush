@@ -57,7 +57,6 @@
                             'keep a record of your confirmation id, which is ' + errorMessage.split(' ')[1].trim() + '. If you do ' +
                             'have any questions, please do get in contact with us!');
 
-                            vm.cardObject = {};
                             CreateJobService.SaveJobPosting(null);
 
                         }else if(errorMessage.indexOf('Stripe') > -1) {
