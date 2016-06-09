@@ -26,6 +26,8 @@
         }
 
         function setUp() {
+            vm.loadingJobs = true;
+
             HomeFactory.GetJobPostings().then(function(data) {
                 var jobObject = data.data.rows;
 
@@ -36,6 +38,10 @@
                 vm.devOpsSysadmin = jobObject.devOpsSysadmin;
                 vm.copyWriting = jobObject.copyWriting;
                 vm.customerSupport = jobObject.customerSupport;
+
+                vm.loadingJobs = false;
+            }).catch(function(err) {
+                vm.loadingJobs = false;
             });
         }
     }
