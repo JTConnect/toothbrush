@@ -1,7 +1,7 @@
 <div class="row"><div class="col-sm-12 tableText">{{vm.title}}</div></div>
 
     <div ng-repeat="obj in vm.jobs | filter:vm.text" class="text" ng-click="vm.navigate(obj)">
-        <div class="row horizontalRule visible-sm-block visible-md-block visible-lg-block" ng-class="{'feature': obj.feature}">
+        <div class="row horizontalRule visible-sm-block visible-md-block visible-lg-block cursor-pointer" ng-class="{'feature': obj.feature}">
             <div class="col-sm-3 view-post-header cBlack"><h2>{{obj.companyName}}</h2></div>
             <div class="col-sm-7">
                 <span class="link">{{obj.jobTitle}}</span>
