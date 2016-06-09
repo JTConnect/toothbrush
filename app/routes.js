@@ -69,6 +69,13 @@
                     templateUrl: 'app/main/contact/contact.html',
                     controller: 'ContactController',
                     controllerAs: 'vm'
+                })
+
+                .state('root.appLayout.about', {
+                    url: '/about',
+                    templateUrl: 'app/main/about/about.html',
+                    controller: 'AboutController',
+                    controllerAs: 'vm'
                 });
         }
 })();

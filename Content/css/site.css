@@ -131,6 +131,13 @@ img {border:none;}
     color: black;
 }
 
+.hrStyle{
+  width:10%;
+   height: 1px;
+   border: 0;
+   border-top: 4px solid #ccc;
+}
+
 .text-center {
     text-align: center;
 }
@@ -372,6 +379,61 @@ img {border:none;}
     text-align: center;
     padding-top:15px;
     color:#65737e;
+}
+
+.about-us{
+  text-align:center;
+  cursor:pointer;
+}
+.about-us h2:hover{
+  color:#00bfff;
+
+}
+
+.nice-text-style-centered{
+  color:black;
+  font-size: 44px;
+  font-weight: 300;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.nice-text-style{
+  color:black;
+  font-size: 44px;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.spacing{
+  padding-top:20px;
+}
+
+.get-to-know-us-text{
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.picture-style{
+    border:2px solid;
+    border-radius:4px;
+}
+
+.padding{
+    padding-right:20px;
+    padding-bottom:15px;
+}
+
+.get-to-know-us-text-side{
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.5;
+    padding-left:10px;
+}
+
+.blue-heart{
+  color:#00bfff;
 }
 
 .contact-us {
