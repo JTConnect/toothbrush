@@ -53,7 +53,7 @@
         }
 
         function requestStripePayment(cardObject, callback) {
-            Stripe.setPublishableKey('pk_test_muGkZFj1QFCCRabaHoRK8TQS');
+            Stripe.setPublishableKey('pk_live_kveAO4g8E4xxaL0oBau97qhF');
             Stripe.card.createToken(cardObject, handleResponse);
 
             function handleResponse(status, response) {
