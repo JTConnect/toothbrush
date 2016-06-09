@@ -36,6 +36,8 @@
                 vm.devOpsSysadmin = jobObject.devOpsSysadmin;
                 vm.copyWriting = jobObject.copyWriting;
                 vm.customerSupport = jobObject.customerSupport;
+                vm.other = jobObject.other;
+                vm.businessAndManagement = jobObject.businessAndManagement;
             });
         }
     }
